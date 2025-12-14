@@ -1,0 +1,33 @@
+body {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  background: #f4f4f4;
+  margin: 0;
+  text-align: center;
+  color: #222;
+}
+
+header {
+  background: #000;
+  color: #ffc107;
+  padding: 25px;
+}
+
+section {
+  background: #fff;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  padding: 10px;
+}
