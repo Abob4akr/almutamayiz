@@ -4,54 +4,90 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>تجهيزات الورش | شركة المتميز الحديث</title>
-<style>
-body{font-family:"Segoe UI";background:linear-gradient(180deg,#f8fafc,#eef3f5);margin:0}
-a{text-decoration:none;color:inherit}
-.c{width:92%;max-width:1200px;margin:auto}
-.card{background:#fff;border-radius:20px;padding:30px;box-shadow:0 20px 40px rgba(0,0,0,.1)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-.it{border:1px solid #e5e7eb;border-radius:18px;padding:18px}
-footer{text-align:center;padding:26px;color:#475569}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- شريط علوي -->
-<header style="background:#ffffff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:100">
-  <div style="width:92%;max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:16px 0">
 
-    <div style="display:flex;align-items:center;gap:12px">
-      <div style="background:linear-gradient(135deg,#0f766e,#164e63);color:#fff;
-                  padding:12px 16px;border-radius:12px;font-weight:800">
-        AM
-      </div>
-      <div>
-        <strong>شركة المتميز الحديث</strong><br>
-        <span style="font-size:12px;color:#64748b">AL MUTAMAYIZ AL HADIT</span>
+<header>
+  <div class="container header-inner">
+    <div class="brand">
+      <div class="brand-mark">AM</div>
+      <div class="brand-text">
+        <strong>شركة المتميز الحديث</strong>
+        <small>AL MUTAMAYIZ AL HADIT</small>
       </div>
     </div>
 
-    <nav style="display:flex;gap:18px;font-weight:600">
+    <nav>
       <a href="index.html">الرئيسية</a>
       <a href="electrical.html">الكهربائية</a>
       <a href="industrial.html">الصناعية</a>
+      <a class="active" href="workshop.html">الورش</a>
       <a href="contact.html">اتصل بنا</a>
     </nav>
-
   </div>
 </header>
-<section style="padding:70px 0">
-<div class="c card">
-<h2>🛠️ تجهيزات الورش</h2>
-<p>كل ما تحتاجه الورشة من أدوات وتجهيزات عملية.</p>
-<div class="grid">
-<div class="it">عدد يدوية احترافية</div>
-<div class="it">معدات لحام</div>
-<div class="it">طاولات وتجهيز</div>
-<div class="it">مستلزمات سلامة</div>
-</div>
-</div>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>تجهيزات الورش 🛠️</h1>
+      <p>كل ما تحتاجه الورش من أدوات وتجهيزات عملية بجودة عالية (عرض فقط — الأسعار حسب الطلب).</p>
+      <div class="badges">
+        <span class="badge">حلول عملية</span>
+        <span class="badge">توريد مستمر</span>
+        <span class="badge">خدمة ودعم</span>
+      </div>
+      <div class="btn-row">
+        <a class="btn primary" href="contact.html">اطلب تسعيرة</a>
+        <a class="btn" href="index.html">رجوع للرئيسية</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h3>أبرز التجهيزات</h3>
+      <p style="margin:0; opacity:.95; line-height:1.9">
+        عدد يدوية – معدات لحام – طاولات وتجهيز – مستلزمات سلامة – تنظيم الورش.
+      </p>
+      <div class="mini-stats">
+        <div class="stat"><div class="num">✓</div><div class="txt">جودة</div></div>
+        <div class="stat"><div class="num">⚙</div><div class="txt">جاهزية</div></div>
+        <div class="stat"><div class="num">★</div><div class="txt">اعتمادية</div></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<footer>© شركة المتميز الحديث</footer>
+<section class="section">
+  <div class="container">
+    <div class="card">
+      <h2 style="margin-top:0">الأصناف المتوفرة (مثال)</h2>
+      <div class="grid">
+        <div class="item">عدد يدوية احترافية <small>مفكات/مفاتيح</small></div>
+        <div class="item">معدات لحام <small>الكترود/اكسسوارات</small></div>
+        <div class="item">طاولات وتجهيز <small>تنظيم الورشة</small></div>
+        <div class="item">مستلزمات سلامة <small>أحذية/خوذ</small></div>
+        <div class="item">مواد تنظيف وصيانة <small>خدمة الورش</small></div>
+        <div class="item">تجهيزات إضافية <small>حسب الطلب</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <div>
+      <strong>شركة المتميز الحديث</strong><br>
+      <small style="color:#64748b">AL MUTAMAYIZ AL HADIT</small>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">الرئيسية</a>
+      <a href="contact.html">اتصل بنا</a>
+    </div>
+    <div class="footer-copy">© جميع الحقوق محفوظة - شركة المتميز الحديث</div>
+  </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/218923167702" target="_blank">واتساب</a>
 </body>
 </html>
