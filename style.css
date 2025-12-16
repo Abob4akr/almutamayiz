@@ -273,3 +273,71 @@ body {
 .sep{ 
   color: rgba(255,255,255,0.6);
 }
+/* ===============================
+   FIX CONTACT VISIBILITY (FINAL)
+=============================== */
+
+.hero{
+  background: linear-gradient(135deg, #0f3d3e, #1b6b6a);
+  color: #ffffff;
+}
+
+.hero h2,
+.hero p{
+  color: #ffffff;
+}
+
+/* مربّع بيانات التواصل */
+.quick-contact{
+  margin-top: 20px;
+  background: rgba(0,0,0,0.35);
+  padding: 16px;
+  border-radius: 14px;
+}
+
+/* العناوين */
+.qc-label{
+  color: #e6f7f6;
+  font-weight: 600;
+}
+
+/* الروابط */
+.quick-contact a{
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.quick-contact a:hover{
+  color: #7fffd4;
+  text-decoration: underline;
+}
+
+/* الفواصل */
+.sep{
+  color: #b9e3df;
+}
+
+/* أزرار الهيرو */
+.btn{
+  background: #ffffff;
+  color: #0f3d3e;
+  font-weight: 700;
+  border-radius: 30px;
+}
+
+.btn.primary{
+  background: #1faa59;
+  color: #ffffff;
+}
+
+.btn:hover{
+  opacity: 0.9;
+}
+
+/* زر واتساب العائم */
+.whatsapp-float{
+  background: #25d366;
+  color: #ffffff;
+  font-weight: bold;
+}
