@@ -4,234 +4,157 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>شركة المتميز الحديث | AL MUTAMAYIZ AL HADIT</title>
-
-<style>
-:root{
---primary:#0f766e;
---secondary:#164e63;
---accent:#22c55e;
---bg:#f4f7f8;
---white:#ffffff;
---text:#0f172a;
---muted:#475569;
---border:#e5e7eb;
---shadow:0 20px 40px rgba(0,0,0,.1);
---radius:22px
-}
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-font-family:"Segoe UI",Tahoma,Arial,sans-serif;
-background:linear-gradient(180deg,#f8fafc,#eef3f5);
-color:var(--text);
-line-height:1.9
-}
-a{text-decoration:none;color:inherit}
-.container{width:92%;max-width:1200px;margin:auto}
-
-header{
-background:#fff;
-border-bottom:1px solid var(--border);
-position:sticky;top:0;z-index:100
-}
-.header-inner{
-display:flex;justify-content:space-between;align-items:center;
-padding:16px 0
-}
-.logo{display:flex;align-items:center;gap:14px}
-.logo-box{
-background:linear-gradient(135deg,var(--primary),var(--secondary));
-color:#fff;font-weight:800;padding:14px 18px;border-radius:14px
-}
-.logo h1{font-size:20px}
-.logo span{font-size:12px;color:var(--muted)}
-.nav a{margin-left:20px;font-weight:600;color:var(--muted)}
-.nav a:hover{color:var(--primary)}
-.menu-btn{display:none;font-size:22px;background:none;border:none;cursor:pointer}
-
-.mobile-menu{display:none;background:#fff;border-bottom:1px solid var(--border)}
-.mobile-menu a{display:block;padding:14px 0;width:92%;margin:auto;font-weight:600}
-body.menu-open .mobile-menu{display:block}
-
-.hero{
-background:linear-gradient(135deg,#dbeafe,#e0f2fe);
-padding:90px 0
-}
-.hero-inner{
-display:grid;grid-template-columns:1.2fr .8fr;gap:50px
-}
-.hero h2{font-size:40px;margin-bottom:18px}
-.hero p{color:var(--muted)}
-.badges span{
-display:inline-block;background:#e6f4f1;color:var(--primary);
-padding:10px 18px;border-radius:999px;margin:6px;font-weight:600
-}
-.buttons{margin:30px 0}
-.btn{
-display:inline-block;padding:15px 30px;border-radius:999px;
-font-weight:700;margin-left:10px
-}
-.btn.main{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff}
-.btn.outline{border:2px solid var(--primary);color:var(--primary)}
-
-.contact-box{
-background:#fff;padding:25px;border-radius:var(--radius);
-box-shadow:var(--shadow);margin-top:30px
-}
-.contact-box p{margin:8px 0}
-
-.hero-card{
-background:#fff;padding:35px;border-radius:var(--radius);
-box-shadow:var(--shadow)
-}
-.stats{display:flex;justify-content:space-between;margin-top:25px}
-.stat{text-align:center}
-.stat strong{font-size:26px;color:var(--primary)}
-
-.section{padding:90px 0}
-.section h3{text-align:center;font-size:34px;margin-bottom:40px}
-
-.grid{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px
-}
-.card-box{
-display:block;
-background:#fff;border-radius:var(--radius);
-box-shadow:var(--shadow);overflow:hidden;
-transition:.3s
-}
-.card-box:hover{transform:translateY(-8px)}
-.card-img{
-height:180px;background:#cbd5e1;
-display:flex;align-items:center;justify-content:center;
-font-size:48px
-}
-.card-content{padding:25px}
-.card-content h4{margin-bottom:10px}
-
-footer{
-background:#fff;border-top:1px solid var(--border);
-padding:30px 0;text-align:center;color:var(--muted)
-}
-
-.whatsapp{
-position:fixed;bottom:22px;right:22px;
-background:#22c55e;color:#fff;
-padding:15px 22px;border-radius:999px;
-font-weight:700;box-shadow:0 15px 30px rgba(0,0,0,.25)
-}
-
-@media(max-width:900px){
-.hero-inner{grid-template-columns:1fr}
-.nav{display:none}
-.menu-btn{display:block}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<a href="https://wa.me/218923167702" class="whatsapp" target="_blank">واتساب</a>
-
 <header>
-<div class="container header-inner">
-<div class="logo">
-<div class="logo-box">AM</div>
-<div>
-<h1>شركة المتميز الحديث</h1>
-<span>AL MUTAMAYIZ AL HADIT</span>
-</div>
-</div>
-<nav class="nav">
-<a href="#home">الرئيسية</a>
-<a href="#about">من نحن</a>
-<a href="#sections">الأقسام</a>
-</nav>
-<button class="menu-btn" onclick="document.body.classList.toggle('menu-open')">☰</button>
-</div>
-<div class="mobile-menu">
-<a href="#home">الرئيسية</a>
-<a href="#about">من نحن</a>
-<a href="#sections">الأقسام</a>
-</div>
+  <div class="container header-inner">
+    <div class="brand">
+      <div class="brand-mark">AM</div>
+      <div class="brand-text">
+        <strong>شركة المتميز الحديث</strong>
+        <small>AL MUTAMAYIZ AL HADIT</small>
+      </div>
+    </div>
+
+    <nav>
+      <a class="active" href="index.html">الرئيسية</a>
+      <a href="electrical.html">المعدات الكهربائية</a>
+      <a href="industrial.html">المعدات الصناعية</a>
+      <a href="workshop.html">تجهيزات الورش</a>
+      <a href="contact.html">اتصل بنا</a>
+    </nav>
+  </div>
 </header>
 
-<section class="hero" id="home">
-<div class="container hero-inner">
-<div>
-<h2>حلول احترافية لمعدات وتجهيزات الورش والمصانع</h2>
-<p>استيراد وتوريد العدد اليدوية والكهربائية ومعدات الورش والمصانع</p>
-<div class="badges">
-<span>30+ سنة خبرة</span>
-<span>جودة واعتمادية</span>
-<span>دعم فني</span>
-</div>
-<div class="buttons">
-<a href="#sections" class="btn main">الأقسام</a>
-<a href="#about" class="btn outline">من نحن</a>
-</div>
-<div class="contact-box">
-<p>📱 واتساب: 0923167702</p>
-<p>📞 هاتف: 0910060041 / 0918358715 / 0910272876</p>
-<p>✉ al_mutamayiz_tools@yahoo.com</p>
-</div>
-</div>
-<div class="hero-card">
-<h3>AL MUTAMAYIZ</h3>
-<p>توريد معدات موثوقة ترفع الكفاءة والإنتاجية</p>
-<div class="stats">
-<div class="stat"><strong>30+</strong><br>خبرة</div>
-<div class="stat"><strong>✓</strong><br>جودة</div>
-<div class="stat"><strong>★</strong><br>ثقة</div>
-</div>
-</div>
-</div>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>حلول احترافية لمعدات وتجهيزات الورش والمصانع</h1>
+      <p>
+        استيراد وتوريد العدد اليدوية والكهربائية، معدات الورش والمصانع، ومستلزمات السلامة المهنية.
+        خبرة تمتد لأكثر من 30 عامًا وجودة نعتمد عليها.
+      </p>
+
+      <div class="badges">
+        <span class="badge">أكثر من 30 سنة خبرة</span>
+        <span class="badge">جودة + اعتمادية</span>
+        <span class="badge">خدمة ودعم</span>
+      </div>
+
+      <div class="btn-row">
+        <a class="btn primary" href="#cats">استعرض الأقسام</a>
+        <a class="btn" href="contact.html">تواصل معنا</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h3>بيانات التواصل السريعة</h3>
+      <p style="margin:0; opacity:.95; line-height:1.9">
+        واتساب: <a style="text-decoration:underline; color:#fff" href="https://wa.me/218923167702">0923167702</a><br>
+        هاتف: <a style="text-decoration:underline; color:#fff" href="tel:+218910060041">0910060041</a> /
+              <a style="text-decoration:underline; color:#fff" href="tel:+218918358715">0918358715</a> /
+              <a style="text-decoration:underline; color:#fff" href="tel:+218910272876">0910272876</a><br>
+        البريد: <a style="text-decoration:underline; color:#fff" href="mailto:al_mutamayiz_tools@yahoo.com">al_mutamayiz_tools@yahoo.com</a><br>
+        فيسبوك: <a style="text-decoration:underline; color:#fff" href="https://www.facebook.com/share/19Pcy5dsSK/?mibextid=wwXIfr" target="_blank">صفحة الشركة</a>
+      </p>
+
+      <div class="mini-stats">
+        <div class="stat"><div class="num">30+</div><div class="txt">سنوات خبرة</div></div>
+        <div class="stat"><div class="num">✓</div><div class="txt">مصادر موثوقة</div></div>
+        <div class="stat"><div class="num">★</div><div class="txt">خدمة ممتازة</div></div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="section" id="about">
-<div class="container card-box">
-<div class="card-content">
-<h4>من نحن</h4>
-<p>
-شركة المتميز الحديث شركة ليبية رائدة في مجال استيراد وتوريد معدات وتجهيزات الورش
-والمصانع والعدد اليدوية والكهربائية بخبرة تتجاوز 30 عامًا.
-</p>
-</div>
-</div>
+  <div class="container">
+    <div class="section-title">
+      <h2>من نحن</h2>
+      <p>خبرة طويلة — جودة — التزام</p>
+    </div>
+
+    <div class="card">
+      <p style="line-height:2; margin-top:0">
+        شركة المتميز الحديث هي شركة ليبية رائدة في مجال استيراد وتوريد معدات وتجهيزات الورش والمصانع،
+        والعدد اليدوية والكهربائية، ومستلزمات السلامة المهنية. نمتلك خبرة تمتد لأكثر من 30 عامًا في هذا المجال،
+        مما جعلنا من الأسماء الموثوقة في السوق الليبي.
+      </p>
+      <p style="line-height:2">
+        نعمل على توفير منتجات عالية الجودة من أفضل المصادر والعلامات التجارية، لتلبية احتياجات الورش،
+        المصانع، الشركات، والفنيين، مع الحرص الدائم على مواكبة التطور التقني ومتطلبات السوق.
+      </p>
+      <p style="line-height:2">
+        تقوم رؤيتنا على تقديم حلول متكاملة وعملية، تجمع بين الجودة، الاعتمادية، والأسعار المناسبة،
+        مع الالتزام بأعلى معايير الخدمة والدعم الفني. كما نسعى لبناء علاقات طويلة الأمد مع عملائنا تقوم على
+        الثقة والشفافية.
+      </p>
+      <p style="line-height:2; margin-bottom:0">
+        هدفنا هو المساهمة الفعلية في تطوير قطاع الورش والصناعات داخل ليبيا، ودعم المشاريع الصغيرة والمتوسطة،
+        من خلال توفير معدات موثوقة تساعد على رفع الكفاءة والإنتاجية.
+      </p>
+    </div>
+  </div>
 </section>
 
-<section class="section" id="sections">
-<div class="container">
-<h3>الأقسام</h3>
-<div class="grid">
-<a class="card-box" href="electrical.html">
-<div class="card-img">⚡</div>
-<div class="card-content">
-<h4>المعدات الكهربائية</h4>
-<p>أدوات كهربائية احترافية</p>
-</div>
-</a>
-<a class="card-box" href="industrial.html">
-<div class="card-img">🏭</div>
-<div class="card-content">
-<h4>المعدات الصناعية</h4>
-<p>حلول صناعية عالية الاعتمادية</p>
-</div>
-</a>
-<a class="card-box" href="workshop.html">
-<div class="card-img">🛠️</div>
-<div class="card-content">
-<h4>تجهيزات الورش</h4>
-<p>تجهيز كامل واحترافي</p>
-</div>
-</a>
-</div>
-</div>
+<section class="section" id="cats">
+  <div class="container">
+    <div class="section-title">
+      <h2>الأقسام</h2>
+      <p>اضغط على القسم للانتقال مباشرة لصفحته</p>
+    </div>
+
+    <div class="grid">
+      <a class="cat" href="electrical.html">
+        <div class="icon">⚡</div>
+        <h3>المعدات الكهربائية</h3>
+        <p>أدوات ومعدات كهربائية احترافية للورش والصناعة.</p>
+        <span class="more">المزيد ←</span>
+      </a>
+
+      <a class="cat" href="industrial.html">
+        <div class="icon">🏭</div>
+        <h3>المعدات الصناعية</h3>
+        <p>معدات صناعية عالية الاعتمادية للشركات والمصانع.</p>
+        <span class="more">المزيد ←</span>
+      </a>
+
+      <a class="cat" href="workshop.html">
+        <div class="icon">🛠️</div>
+        <h3>تجهيزات الورش</h3>
+        <p>تجهيزات متكاملة للورش مع حلول عملية.</p>
+        <span class="more">المزيد ←</span>
+      </a>
+    </div>
+
+    <div class="btn-row">
+      <a class="btn primary" href="contact.html">اطلب تسعيرة / تواصل الآن</a>
+      <a class="btn" href="https://wa.me/218923167702" target="_blank">مراسلة واتساب</a>
+    </div>
+  </div>
 </section>
 
 <footer>
-© جميع الحقوق محفوظة - شركة المتميز الحديث
+  <div class="container footer-inner">
+    <div>
+      <strong>شركة المتميز الحديث</strong><br>
+      <small style="color:#64748b">AL MUTAMAYIZ AL HADIT</small>
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html">الرئيسية</a>
+      <a href="electrical.html">الكهربائية</a>
+      <a href="industrial.html">الصناعية</a>
+      <a href="workshop.html">الورش</a>
+      <a href="contact.html">اتصل بنا</a>
+    </div>
+
+    <div class="footer-copy">© جميع الحقوق محفوظة - شركة المتميز الحديث</div>
+  </div>
 </footer>
 
+<a class="whatsapp" href="https://wa.me/218923167702" target="_blank">واتساب</a>
 </body>
 </html>
