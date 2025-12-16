@@ -1,186 +1,340 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: "Segoe UI", Tahoma, sans-serif;
+/* =====================
+   PROFESSIONAL THEME
+===================== */
+:root {
+  --primary: #0f766e;
+  --primary-dark: #115e59;
+  --secondary: #164e63;
+  --accent: #22c55e;
+
+  --bg-main: #f4f7f8;
+  --bg-soft: #e8f1f2;
+
+  --text-main: #0f172a;
+  --text-muted: #475569;
+
+  --white: #ffffff;
+  --border: #dbe4e6;
+
+  --radius-lg: 22px;
+  --radius-md: 14px;
+
+  --shadow-soft: 0 10px 30px rgba(0,0,0,.08);
+  --shadow-strong: 0 20px 50px rgba(0,0,0,.12);
 }
 
-body{
-  background:#f5f7f8;
-  color:#1f2d2d;
+/* =====================
+   RESET
+===================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* عام */
-.container{
-  width:90%;
-  max-width:1100px;
-  margin:auto;
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  background: linear-gradient(180deg,#f8fafc,#eef3f5);
+  color: var(--text-main);
+  line-height: 1.9;
 }
 
-a{
-  text-decoration:none;
-  color:inherit;
+/* =====================
+   GLOBAL
+===================== */
+a {
+  color: var(--primary-dark);
+  text-decoration: none;
 }
 
-/* هيدر */
-.header{
-  background:#0f3d3e;
-  color:#fff;
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.header-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 0;
+/* =====================
+   HEADER / NAV
+===================== */
+header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.logo{
-  display:flex;
-  align-items:center;
-  gap:12px;
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
 }
 
-.logo-box{
-  background:#1faa59;
-  padding:12px;
-  border-radius:10px;
-  font-weight:bold;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
-.nav a{
-  margin-right:18px;
-  font-weight:600;
-  opacity:0.9;
+.brand-mark {
+  background: linear-gradient(135deg,var(--primary),var(--secondary));
+  color: #fff;
+  font-weight: 800;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-size: 18px;
 }
 
-.nav a:hover{
-  opacity:1;
+.brand-text h1 {
+  font-size: 20px;
 }
 
-/* هيرو */
-.hero{
-  background:linear-gradient(135deg,#0f3d3e,#1b6b6a);
-  color:#fff;
-  padding:70px 0;
-  text-align:center;
+.brand-text p {
+  font-size: 12px;
+  color: var(--text-muted);
 }
 
-.hero h2{
-  font-size:32px;
-  margin-bottom:15px;
+.nav a {
+  margin-left: 22px;
+  font-weight: 600;
+  color: var(--text-muted);
 }
 
-.hero p{
-  max-width:700px;
-  margin:0 auto 25px;
-  opacity:0.9;
+.nav a.active,
+.nav a:hover {
+  color: var(--primary);
 }
 
-.badges span{
-  display:inline-block;
-  background:rgba(255,255,255,0.15);
-  padding:8px 14px;
-  border-radius:20px;
-  margin:5px;
-  font-size:14px;
+/* =====================
+   HERO
+===================== */
+.hero {
+  background: linear-gradient(135deg,#dbeafe,#e0f2fe);
+  padding: 90px 0;
 }
 
-.hero-buttons{
-  margin:30px 0;
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 50px;
 }
 
-.btn{
-  padding:14px 26px;
-  border-radius:30px;
-  font-weight:bold;
-  margin:5px;
-  display:inline-block;
+.hero h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 18px;
 }
 
-.btn.main{
-  background:#1faa59;
-  color:#fff;
+.hero-sub {
+  font-size: 18px;
+  color: var(--text-muted);
 }
 
-.btn.outline{
-  border:2px solid #fff;
-  color:#fff;
+.hero-badges {
+  margin: 26px 0;
 }
 
-.contact-box{
-  margin-top:30px;
-  background:rgba(0,0,0,0.35);
-  padding:20px;
-  border-radius:14px;
+.badge {
+  display: inline-block;
+  background: var(--bg-soft);
+  color: var(--primary-dark);
+  padding: 10px 18px;
+  border-radius: 999px;
+  margin: 6px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-.contact-box p{
-  margin:8px 0;
+/* =====================
+   BUTTONS
+===================== */
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: .3s;
 }
 
-/* أقسام عامة */
-.section{
-  padding:60px 0;
+.btn.primary {
+  background: linear-gradient(135deg,var(--primary),var(--secondary));
+  color: #fff;
+  box-shadow: var(--shadow-soft);
 }
 
-.section.dark{
-  background:#eef5f4;
+.btn.secondary {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
 }
 
-.card{
-  background:#fff;
-  padding:35px;
-  border-radius:18px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+.btn:hover {
+  transform: translateY(-2px);
 }
 
-.center{
-  text-align:center;
-  margin-bottom:30px;
+/* =====================
+   CONTACT INFO (FIXED VISIBILITY)
+===================== */
+.quick-contact {
+  margin-top: 30px;
+  background: rgba(255,255,255,.85);
+  padding: 22px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
 }
 
-/* شبكة الأقسام */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
+.qc-item {
+  margin-bottom: 10px;
+  color: var(--text-main);
 }
 
-.section-card{
-  background:#fff;
-  padding:30px;
-  border-radius:18px;
-  text-align:center;
-  box-shadow:0 10px 20px rgba(0,0,0,0.1);
-  transition:0.3s;
+.qc-item a {
+  color: var(--primary-dark);
+  font-weight: 600;
 }
 
-.section-card:hover{
-  transform:translateY(-6px);
+/* =====================
+   HERO CARD
+===================== */
+.hero-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 35px;
+  box-shadow: var(--shadow-strong);
 }
 
-.section-card h4{
-  margin:15px 0 8px;
+.mini-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 26px;
 }
 
-/* فوتر */
-.footer{
-  background:#0f3d3e;
-  color:#fff;
-  text-align:center;
-  padding:18px;
+.stat {
+  text-align: center;
 }
 
-/* واتساب */
-.whatsapp-float{
-  position:fixed;
-  bottom:20px;
-  left:20px;
-  background:#25d366;
-  color:#fff;
-  padding:14px 20px;
-  border-radius:30px;
-  font-weight:bold;
-  z-index:999;
+.stat .num {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+/* =====================
+   SECTIONS
+===================== */
+.section {
+  padding: 90px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.section-title p {
+  color: var(--text-muted);
+}
+
+/* =====================
+   CARDS
+===================== */
+.card {
+  background: var(--white);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+/* =====================
+   CATEGORIES
+===================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 30px;
+}
+
+.category-card {
+  background: var(--white);
+  padding: 35px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  transition: .3s;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-strong);
+}
+
+.category-card .icon {
+  font-size: 42px;
+}
+
+.category-card h3 {
+  margin: 14px 0;
+}
+
+.category-card p {
+  color: var(--text-muted);
+}
+
+.more {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer {
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-links a {
+  margin: 0 12px;
+  font-weight: 600;
+}
+
+/* =====================
+   WHATSAPP FLOAT
+===================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #22c55e;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 15px 30px rgba(0,0,0,.25);
+}
+
+/* =====================
+   MOBILE
+===================== */
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
 }
