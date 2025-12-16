@@ -6,228 +6,125 @@
 <title>شركة المتميز الحديث | AL MUTAMAYIZ AL HADIT</title>
 
 <style>
-/* =======================
-   ULTRA PROFESSIONAL STYLE
-======================= */
 :root{
-  --primary:#0f766e;
-  --secondary:#164e63;
-  --accent:#22c55e;
-  --bg:#f4f7f8;
-  --white:#ffffff;
-  --text:#0f172a;
-  --muted:#475569;
-  --border:#e5e7eb;
-  --shadow:0 20px 40px rgba(0,0,0,.08);
-  --radius:20px;
+--primary:#0f766e;
+--secondary:#164e63;
+--accent:#22c55e;
+--bg:#f4f7f8;
+--white:#ffffff;
+--text:#0f172a;
+--muted:#475569;
+--border:#e5e7eb;
+--shadow:0 20px 40px rgba(0,0,0,.1);
+--radius:22px
 }
-
-*{box-sizing:border-box;margin:0;padding:0}
-
+*{margin:0;padding:0;box-sizing:border-box}
 body{
-  font-family:"Segoe UI",Tahoma,Arial,sans-serif;
-  background:linear-gradient(180deg,#f8fafc,#eef3f5);
-  color:var(--text);
-  line-height:1.9;
+font-family:"Segoe UI",Tahoma,Arial,sans-serif;
+background:linear-gradient(180deg,#f8fafc,#eef3f5);
+color:var(--text);
+line-height:1.9
 }
-
 a{text-decoration:none;color:inherit}
+.container{width:92%;max-width:1200px;margin:auto}
 
-.container{
-  width:92%;
-  max-width:1200px;
-  margin:auto;
-}
-
-/* HEADER */
 header{
-  background:var(--white);
-  border-bottom:1px solid var(--border);
-  position:sticky;
-  top:0;
-  z-index:100;
+background:#fff;
+border-bottom:1px solid var(--border);
+position:sticky;top:0;z-index:100
 }
-
 .header-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:16px 0;
+display:flex;justify-content:space-between;align-items:center;
+padding:16px 0
 }
-
-.logo{
-  display:flex;
-  align-items:center;
-  gap:14px;
-}
-
+.logo{display:flex;align-items:center;gap:14px}
 .logo-box{
-  background:linear-gradient(135deg,var(--primary),var(--secondary));
-  color:#fff;
-  font-weight:800;
-  padding:14px 18px;
-  border-radius:14px;
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+color:#fff;font-weight:800;padding:14px 18px;border-radius:14px
 }
-
 .logo h1{font-size:20px}
 .logo span{font-size:12px;color:var(--muted)}
-
-.nav a{
-  margin-left:20px;
-  font-weight:600;
-  color:var(--muted);
-}
-
+.nav a{margin-left:20px;font-weight:600;color:var(--muted)}
 .nav a:hover{color:var(--primary)}
+.menu-btn{display:none;font-size:22px;background:none;border:none;cursor:pointer}
 
-/* HERO */
+.mobile-menu{display:none;background:#fff;border-bottom:1px solid var(--border)}
+.mobile-menu a{display:block;padding:14px 0;width:92%;margin:auto;font-weight:600}
+body.menu-open .mobile-menu{display:block}
+
 .hero{
-  background:linear-gradient(135deg,#dbeafe,#e0f2fe);
-  padding:90px 0;
+background:linear-gradient(135deg,#dbeafe,#e0f2fe);
+padding:90px 0
 }
-
 .hero-inner{
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:50px;
+display:grid;grid-template-columns:1.2fr .8fr;gap:50px
 }
-
-.hero h2{
-  font-size:40px;
-  margin-bottom:18px;
-}
-
+.hero h2{font-size:40px;margin-bottom:18px}
 .hero p{color:var(--muted)}
-
 .badges span{
-  display:inline-block;
-  background:#e6f4f1;
-  color:var(--primary);
-  padding:10px 18px;
-  border-radius:999px;
-  margin:6px;
-  font-weight:600;
+display:inline-block;background:#e6f4f1;color:var(--primary);
+padding:10px 18px;border-radius:999px;margin:6px;font-weight:600
 }
-
 .buttons{margin:30px 0}
-
 .btn{
-  display:inline-block;
-  padding:15px 30px;
-  border-radius:999px;
-  font-weight:700;
-  margin-left:10px;
+display:inline-block;padding:15px 30px;border-radius:999px;
+font-weight:700;margin-left:10px
 }
+.btn.main{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff}
+.btn.outline{border:2px solid var(--primary);color:var(--primary)}
 
-.btn.main{
-  background:linear-gradient(135deg,var(--primary),var(--secondary));
-  color:#fff;
-}
-
-.btn.outline{
-  border:2px solid var(--primary);
-  color:var(--primary);
-}
-
-/* CONTACT BOX */
 .contact-box{
-  background:var(--white);
-  padding:25px;
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  margin-top:30px;
+background:#fff;padding:25px;border-radius:var(--radius);
+box-shadow:var(--shadow);margin-top:30px
 }
-
 .contact-box p{margin:8px 0}
 
-/* HERO CARD */
 .hero-card{
-  background:var(--white);
-  padding:35px;
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
+background:#fff;padding:35px;border-radius:var(--radius);
+box-shadow:var(--shadow)
 }
+.stats{display:flex;justify-content:space-between;margin-top:25px}
+.stat{text-align:center}
+.stat strong{font-size:26px;color:var(--primary)}
 
-.stats{
-  display:flex;
-  justify-content:space-between;
-  margin-top:25px;
-}
+.section{padding:90px 0}
+.section h3{text-align:center;font-size:34px;margin-bottom:40px}
 
-.stat{
-  text-align:center;
-}
-
-.stat strong{
-  font-size:26px;
-  color:var(--primary);
-}
-
-/* SECTIONS */
-.section{
-  padding:90px 0;
-}
-
-.section h3{
-  font-size:34px;
-  text-align:center;
-  margin-bottom:40px;
-}
-
-.card{
-  background:var(--white);
-  padding:40px;
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-}
-
-/* GRID */
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
+display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px
 }
-
-.grid a{
-  background:var(--white);
-  padding:35px;
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  transition:.3s;
+.card-box{
+display:block;
+background:#fff;border-radius:var(--radius);
+box-shadow:var(--shadow);overflow:hidden;
+transition:.3s
 }
-
-.grid a:hover{
-  transform:translateY(-8px);
+.card-box:hover{transform:translateY(-8px)}
+.card-img{
+height:180px;background:#cbd5e1;
+display:flex;align-items:center;justify-content:center;
+font-size:48px
 }
+.card-content{padding:25px}
+.card-content h4{margin-bottom:10px}
 
-.grid h4{margin:15px 0}
-
-/* FOOTER */
 footer{
-  background:var(--white);
-  border-top:1px solid var(--border);
-  padding:30px 0;
-  text-align:center;
-  color:var(--muted);
+background:#fff;border-top:1px solid var(--border);
+padding:30px 0;text-align:center;color:var(--muted)
 }
 
-/* WHATSAPP */
 .whatsapp{
-  position:fixed;
-  bottom:22px;
-  right:22px;
-  background:#22c55e;
-  color:#fff;
-  padding:15px 22px;
-  border-radius:999px;
-  font-weight:700;
-  box-shadow:0 15px 30px rgba(0,0,0,.25);
+position:fixed;bottom:22px;right:22px;
+background:#22c55e;color:#fff;
+padding:15px 22px;border-radius:999px;
+font-weight:700;box-shadow:0 15px 30px rgba(0,0,0,.25)
 }
 
-/* MOBILE */
 @media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr}
-  .nav{display:none}
+.hero-inner{grid-template-columns:1fr}
+.nav{display:none}
+.menu-btn{display:block}
 }
 </style>
 </head>
@@ -237,81 +134,103 @@ footer{
 <a href="https://wa.me/218923167702" class="whatsapp" target="_blank">واتساب</a>
 
 <header>
-  <div class="container header-inner">
-    <div class="logo">
-      <div class="logo-box">AM</div>
-      <div>
-        <h1>شركة المتميز الحديث</h1>
-        <span>AL MUTAMAYIZ AL HADIT</span>
-      </div>
-    </div>
-    <nav class="nav">
-      <a href="#home">الرئيسية</a>
-      <a href="#about">من نحن</a>
-      <a href="#sections">الأقسام</a>
-    </nav>
-  </div>
+<div class="container header-inner">
+<div class="logo">
+<div class="logo-box">AM</div>
+<div>
+<h1>شركة المتميز الحديث</h1>
+<span>AL MUTAMAYIZ AL HADIT</span>
+</div>
+</div>
+<nav class="nav">
+<a href="#home">الرئيسية</a>
+<a href="#about">من نحن</a>
+<a href="#sections">الأقسام</a>
+</nav>
+<button class="menu-btn" onclick="document.body.classList.toggle('menu-open')">☰</button>
+</div>
+<div class="mobile-menu">
+<a href="#home">الرئيسية</a>
+<a href="#about">من نحن</a>
+<a href="#sections">الأقسام</a>
+</div>
 </header>
 
 <section class="hero" id="home">
-  <div class="container hero-inner">
-    <div>
-      <h2>حلول احترافية لمعدات وتجهيزات الورش والمصانع</h2>
-      <p>استيراد وتوريد العدد اليدوية والكهربائية ومعدات الورش والمصانع</p>
-
-      <div class="badges">
-        <span>أكثر من 30 سنة خبرة</span>
-        <span>جودة واعتمادية</span>
-        <span>دعم فني</span>
-      </div>
-
-      <div class="buttons">
-        <a href="#sections" class="btn main">الأقسام</a>
-        <a href="#about" class="btn outline">من نحن</a>
-      </div>
-
-      <div class="contact-box">
-        <p>📱 واتساب: 0923167702</p>
-        <p>📞 هاتف: 0910060041 / 0918358715 / 0910272876</p>
-        <p>✉ al_mutamayiz_tools@yahoo.com</p>
-      </div>
-    </div>
-
-    <div class="hero-card">
-      <h3>AL MUTAMAYIZ</h3>
-      <p>توريد معدات موثوقة ترفع الكفاءة والإنتاجية</p>
-      <div class="stats">
-        <div class="stat"><strong>30+</strong><br>سنة خبرة</div>
-        <div class="stat"><strong>✓</strong><br>جودة</div>
-        <div class="stat"><strong>★</strong><br>ثقة</div>
-      </div>
-    </div>
-  </div>
+<div class="container hero-inner">
+<div>
+<h2>حلول احترافية لمعدات وتجهيزات الورش والمصانع</h2>
+<p>استيراد وتوريد العدد اليدوية والكهربائية ومعدات الورش والمصانع</p>
+<div class="badges">
+<span>30+ سنة خبرة</span>
+<span>جودة واعتمادية</span>
+<span>دعم فني</span>
+</div>
+<div class="buttons">
+<a href="#sections" class="btn main">الأقسام</a>
+<a href="#about" class="btn outline">من نحن</a>
+</div>
+<div class="contact-box">
+<p>📱 واتساب: 0923167702</p>
+<p>📞 هاتف: 0910060041 / 0918358715 / 0910272876</p>
+<p>✉ al_mutamayiz_tools@yahoo.com</p>
+</div>
+</div>
+<div class="hero-card">
+<h3>AL MUTAMAYIZ</h3>
+<p>توريد معدات موثوقة ترفع الكفاءة والإنتاجية</p>
+<div class="stats">
+<div class="stat"><strong>30+</strong><br>خبرة</div>
+<div class="stat"><strong>✓</strong><br>جودة</div>
+<div class="stat"><strong>★</strong><br>ثقة</div>
+</div>
+</div>
+</div>
 </section>
 
 <section class="section" id="about">
-  <div class="container card">
-    <h3>من نحن</h3>
-    <p>
-      شركة المتميز الحديث شركة ليبية رائدة في مجال استيراد وتوريد معدات وتجهيزات الورش والمصانع
-      والعدد اليدوية والكهربائية، بخبرة تتجاوز 30 عامًا في السوق الليبي.
-    </p>
-  </div>
+<div class="container card-box">
+<div class="card-content">
+<h4>من نحن</h4>
+<p>
+شركة المتميز الحديث شركة ليبية رائدة في مجال استيراد وتوريد معدات وتجهيزات الورش
+والمصانع والعدد اليدوية والكهربائية بخبرة تتجاوز 30 عامًا.
+</p>
+</div>
+</div>
 </section>
 
 <section class="section" id="sections">
-  <div class="container">
-    <h3>الأقسام</h3>
-    <div class="grid">
-      <a href="#"><h4>⚡ المعدات الكهربائية</h4><p>أدوات احترافية</p></a>
-      <a href="#"><h4>🏭 المعدات الصناعية</h4><p>حلول صناعية</p></a>
-      <a href="#"><h4>🛠️ تجهيزات الورش</h4><p>تجهيز متكامل</p></a>
-    </div>
-  </div>
+<div class="container">
+<h3>الأقسام</h3>
+<div class="grid">
+<a class="card-box" href="electrical.html">
+<div class="card-img">⚡</div>
+<div class="card-content">
+<h4>المعدات الكهربائية</h4>
+<p>أدوات كهربائية احترافية</p>
+</div>
+</a>
+<a class="card-box" href="industrial.html">
+<div class="card-img">🏭</div>
+<div class="card-content">
+<h4>المعدات الصناعية</h4>
+<p>حلول صناعية عالية الاعتمادية</p>
+</div>
+</a>
+<a class="card-box" href="workshop.html">
+<div class="card-img">🛠️</div>
+<div class="card-content">
+<h4>تجهيزات الورش</h4>
+<p>تجهيز كامل واحترافي</p>
+</div>
+</a>
+</div>
+</div>
 </section>
 
 <footer>
-  © جميع الحقوق محفوظة - شركة المتميز الحديث
+© جميع الحقوق محفوظة - شركة المتميز الحديث
 </footer>
 
 </body>
