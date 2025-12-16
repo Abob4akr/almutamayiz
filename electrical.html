@@ -1,58 +1,164 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>المعدات الكهربائية | شركة المتميز الحديث</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المعدات الكهربائية | شركة المتميز الحديث</title>
+<style>
+:root{
+--primary:#0f766e;
+--secondary:#164e63;
+--accent:#22c55e;
+--white:#ffffff;
+--text:#0f172a;
+--muted:#475569;
+--border:#e5e7eb;
+--shadow:0 20px 40px rgba(0,0,0,.1);
+--radius:22px
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:"Segoe UI",Tahoma,Arial,sans-serif;
+background:linear-gradient(180deg,#f8fafc,#eef3f5);
+color:var(--text);
+line-height:1.9
+}
+a{text-decoration:none;color:inherit}
+.container{width:92%;max-width:1200px;margin:auto}
+header{
+background:#fff;border-bottom:1px solid var(--border);
+position:sticky;top:0;z-index:100
+}
+.header-inner{
+display:flex;justify-content:space-between;align-items:center;padding:16px 0
+}
+.logo{display:flex;align-items:center;gap:14px}
+.logo-box{
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+color:#fff;font-weight:800;padding:14px 18px;border-radius:14px
+}
+.logo h1{font-size:20px}
+.logo span{font-size:12px;color:var(--muted)}
+.nav a{margin-left:20px;font-weight:600;color:var(--muted)}
+.nav a:hover{color:var(--primary)}
+.menu-btn{display:none;font-size:22px;background:none;border:none;cursor:pointer}
+.mobile-menu{display:none;background:#fff;border-bottom:1px solid var(--border)}
+.mobile-menu a{display:block;padding:14px 0;width:92%;margin:auto;font-weight:600}
+body.menu-open .mobile-menu{display:block}
+.hero{
+background:linear-gradient(135deg,#dbeafe,#e0f2fe);
+padding:70px 0
+}
+.hero h2{font-size:34px;margin-bottom:12px}
+.hero p{color:var(--muted)}
+.badges span{
+display:inline-block;background:#e6f4f1;color:var(--primary);
+padding:10px 18px;border-radius:999px;margin:6px;font-weight:600
+}
+.section{padding:70px 0}
+.card{
+background:#fff;border-radius:var(--radius);
+box-shadow:var(--shadow);padding:28px
+}
+.grid{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:22px;margin-top:18px
+}
+.item{
+background:#fff;border:1px solid var(--border);
+border-radius:18px;padding:18px;box-shadow:0 12px 24px rgba(0,0,0,.06)
+}
+.item h3{margin-bottom:6px}
+.item p{color:var(--muted)}
+.btn{
+display:inline-block;padding:14px 26px;border-radius:999px;
+font-weight:700;margin-left:10px
+}
+.btn.main{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff}
+.btn.outline{border:2px solid var(--primary);color:var(--primary)}
+footer{
+background:#fff;border-top:1px solid var(--border);
+padding:26px 0;text-align:center;color:var(--muted)
+}
+.whatsapp{
+position:fixed;bottom:22px;right:22px;
+background:#22c55e;color:#fff;
+padding:15px 22px;border-radius:999px;
+font-weight:700;box-shadow:0 15px 30px rgba(0,0,0,.25)
+}
+@media(max-width:900px){
+.nav{display:none}
+.menu-btn{display:block}
+}
+</style>
 </head>
 <body>
 
-<a href="https://wa.me/218923167702" class="whatsapp-float" target="_blank">واتساب</a>
+<a href="https://wa.me/218923167702" class="whatsapp" target="_blank">واتساب</a>
 
-<header class="header">
-  <div class="container header-inner">
-    <div class="logo">
-      <div class="logo-box">AM</div>
-      <div>
-        <h1>شركة المتميز الحديث</h1>
-        <span>AL MUTAMAYIZ AL HADIT</span>
-      </div>
-    </div>
-    <nav class="nav">
-      <a href="index.html">الرئيسية</a>
-      <a href="electrical.html">المعدات الكهربائية</a>
-      <a href="industrial.html">المعدات الصناعية</a>
-      <a href="workshop.html">تجهيزات الورش</a>
-      <a href="contact.html">اتصل بنا</a>
-    </nav>
-  </div>
+<header>
+<div class="container header-inner">
+<div class="logo">
+<div class="logo-box">AM</div>
+<div>
+<h1>شركة المتميز الحديث</h1>
+<span>AL MUTAMAYIZ AL HADIT</span>
+</div>
+</div>
+<nav class="nav">
+<a href="index.html">الرئيسية</a>
+<a href="electrical.html">الكهربائية</a>
+<a href="industrial.html">الصناعية</a>
+<a href="workshop.html">الورش</a>
+<a href="contact.html">اتصل بنا</a>
+</nav>
+<button class="menu-btn" onclick="document.body.classList.toggle('menu-open')">☰</button>
+</div>
+<div class="mobile-menu">
+<a href="index.html">الرئيسية</a>
+<a href="electrical.html">المعدات الكهربائية</a>
+<a href="industrial.html">المعدات الصناعية</a>
+<a href="workshop.html">تجهيزات الورش</a>
+<a href="contact.html">اتصل بنا</a>
+</div>
 </header>
 
-<section class="section">
-  <div class="container card">
-    <h3>⚡ المعدات الكهربائية</h3>
-    <p>
-      نوفر معدات وأدوات كهربائية احترافية للورش والمصانع، بجودة عالية واعتمادية ممتازة، من أفضل المصادر والعلامات.
-    </p>
-
-    <h4 style="margin-top:18px;">أمثلة على المنتجات</h4>
-    <ul style="margin-top:10px; line-height:2;">
-      <li>دريل / شنيور / هلتي</li>
-      <li>صاروخ جلخ / قص / تلميع</li>
-      <li>مفكات كهرباء / دريل شحن</li>
-      <li>ملحقات وقطع غيار واكسسوارات</li>
-    </ul>
-
-    <div style="margin-top:20px;">
-      <a class="btn main" href="contact.html">اطلب تسعيرة</a>
-      <a class="btn outline" href="index.html#sections">رجوع للأقسام</a>
-    </div>
-  </div>
+<section class="hero">
+<div class="container">
+<h2>⚡ المعدات الكهربائية</h2>
+<p>أدوات ومعدات كهربائية احترافية للورش والمصانع — بدون أسعار (عرض فقط).</p>
+<div class="badges">
+<span>جودة عالية</span>
+<span>اعتمادية</span>
+<span>خدمة ودعم</span>
+</div>
+</div>
 </section>
 
-<footer class="footer">
-  <p>© جميع الحقوق محفوظة - شركة المتميز الحديث</p>
+<section class="section">
+<div class="container">
+<div class="card">
+<h2>أبرز المنتجات</h2>
+<p style="color:var(--muted);margin-top:6px;">تقدر تغيّر النصوص حسب البضاعة الموجودة عندك.</p>
+<div class="grid">
+<div class="item"><h3>دريل / شنيور</h3><p>معدات حفر قوية للأعمال الصناعية والورش.</p></div>
+<div class="item"><h3>هلتي تكسير</h3><p>حلول تكسير وحفر للأعمال الثقيلة.</p></div>
+<div class="item"><h3>صاروخ جلخ / قص</h3><p>معدات قطع وجلخ باعتمادية عالية.</p></div>
+<div class="item"><h3>مفكات كهربائية</h3><p>حلول عملية للفك والتركيب.</p></div>
+<div class="item"><h3>ملحقات وقطع غيار</h3><p>أقراص، ريش، شفرات، وإكسسوارات.</p></div>
+<div class="item"><h3>معدات شحن</h3><p>بطاريات، شواحن، أطقم متعددة الاستخدام.</p></div>
+</div>
+
+<div style="margin-top:22px;">
+<a class="btn main" href="contact.html">اطلب تسعيرة / تواصل</a>
+<a class="btn outline" href="index.html#sections">رجوع للأقسام</a>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+© جميع الحقوق محفوظة - شركة المتميز الحديث
 </footer>
 
 </body>
