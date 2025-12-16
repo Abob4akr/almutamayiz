@@ -101,3 +101,14 @@ footer{
   color:var(--muted);
   font-size:14px;
 }
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  header, section {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 20px);
+  }
+
