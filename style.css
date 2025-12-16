@@ -244,3 +244,32 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
+/* ===== Fix contact links visibility ===== */
+.quick-contact a,
+.footer a,
+.nav a{
+  color: #eaf2ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.quick-contact a:hover,
+.footer a:hover,
+.nav a:hover{
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.quick-contact{
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  padding: 14px 16px;
+  border-radius: 14px;
+}
+
+.qc-label{ 
+  color: rgba(255,255,255,0.85);
+}
+.sep{ 
+  color: rgba(255,255,255,0.6);
+}
