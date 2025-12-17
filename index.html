@@ -6,135 +6,166 @@
   <title>شركة المتميز الحديث | AL MUTAMAYIZ AL HADIT</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <!-- WhatsApp Floating -->
+  <a class="whatsapp-float" href="https://wa.me/218923167702" target="_blank" rel="noopener">واتساب</a>
 
-  <a class="whatsapp" href="https://wa.me/218923167702" target="_blank" rel="noopener">واتساب</a>
-
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
+      <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+
       <a class="brand" href="index.html">
-        <div class="brand-logo">
-          <img src="images/logo.svg" alt="AL MUTAMAYIZ Logo">
-        </div>
-        <div class="brand-text">
-          <h1>شركة المتميز الحديث</h1>
-          <p>AL MUTAMAYIZ AL HADIT</p>
-        </div>
+        <span class="logo-icon">AM</span>
+        <span class="brand-text">
+          <strong class="t" data-ar="شركة المتميز الحديث" data-en="AL MUTAMAYIZ AL HADIT">شركة المتميز الحديث</strong>
+          <small class="t" data-ar="معدات الورش والمصانع" data-en="Workshop & Industrial Equipment">معدات الورش والمصانع</small>
+        </span>
       </a>
 
-      <nav class="nav">
-        <a href="index.html" class="active" data-i18n="home">الرئيسية</a>
-        <a href="#about" data-i18n="about">من نحن</a>
-        <a href="#categories" data-i18n="cats">الأقسام</a>
-        <a href="contact.html" data-i18n="contact">اتصل بنا</a>
-      </nav>
-
       <div class="header-actions">
-        <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
-        <button class="menu-btn" onclick="openMenu()" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
+        <button class="lang-btn" id="langBtn" type="button">EN</button>
       </div>
     </div>
-  </header>
 
-  <!-- mobile nav -->
-  <div class="mobile-nav" id="mobileNav">
-    <div class="panel">
-      <div class="close">
-        <span>Menu</span>
-        <button class="lang-btn" onclick="closeMenu()">✕</button>
+    <!-- Mobile Menu -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a class="t" data-ar="الرئيسية" data-en="Home" href="index.html">الرئيسية</a>
+      <a class="t" data-ar="من نحن" data-en="About" href="#about">من نحن</a>
+      <a class="t" data-ar="الأقسام" data-en="Categories" href="#categories">الأقسام</a>
+      <a class="t" data-ar="اتصل بنا" data-en="Contact" href="contact.html">اتصل بنا</a>
+      <div class="mobile-mini">
+        <a href="electrical.html" class="t" data-ar="المعدات الكهربائية" data-en="Electrical">المعدات الكهربائية</a>
+        <a href="mechanical.html" class="t" data-ar="المعدات الميكانيكية" data-en="Mechanical">المعدات الميكانيكية</a>
+        <a href="lubrication.html" class="t" data-ar="التزييت والتشحيم" data-en="Lubrication">التزييت والتشحيم</a>
       </div>
-      <a href="index.html" data-i18n="home">الرئيسية</a>
-      <a href="#about" onclick="closeMenu()" data-i18n="about">من نحن</a>
-      <a href="#categories" onclick="closeMenu()" data-i18n="cats">الأقسام</a>
-      <a href="contact.html" data-i18n="contact">اتصل بنا</a>
-    </div>
-  </div>
+    </nav>
+  </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container hero-grid">
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <div class="pill t" data-ar="خبرة + جودة + اعتماد" data-en="Experience + Quality + Trust">
+          خبرة + جودة + اعتماد
+        </div>
 
-      <div class="hero-card">
-        <div class="inner">
-          <div class="hero-title">حلول احترافية لمعدات وتجهيزات الورش والمصانع</div>
-          <div class="hero-sub">
-            استيراد وتوريد العدد اليدوية والكهربائية، معدات الورش والمصانع، ومستلزمات السلامة المهنية.
+        <h1 class="hero-title t"
+            data-ar="حلول احترافية لمعدات وتجهيزات الورش والمصانع"
+            data-en="Professional Solutions for Workshop & Industrial Equipment">
+          حلول احترافية لمعدات وتجهيزات الورش والمصانع
+        </h1>
+
+        <p class="hero-sub t"
+           data-ar="استيراد وتوريد العدد اليدوية والكهربائية والمعدات الصناعية، مع خدمة ودعم يعتمد عليهم."
+           data-en="Importing and supplying tools & industrial equipment with reliable support and service.">
+          استيراد وتوريد العدد اليدوية والكهربائية والمعدات الصناعية، مع خدمة ودعم يعتمد عليهم.
+        </p>
+
+        <div class="badges">
+          <span class="badge t" data-ar="أكثر من 30 سنة خبرة" data-en="30+ Years Experience">أكثر من 30 سنة خبرة</span>
+          <span class="badge t" data-ar="مصادر وعلامات موثوقة" data-en="Trusted Sources & Brands">مصادر وعلامات موثوقة</span>
+          <span class="badge t" data-ar="دعم سريع" data-en="Fast Support">دعم سريع</span>
+        </div>
+
+        <div class="hero-cta">
+          <a class="btn primary t" data-ar="استعرض الأقسام" data-en="Browse Categories" href="#categories">استعرض الأقسام</a>
+          <a class="btn ghost t" data-ar="تواصل معنا" data-en="Contact Us" href="contact.html">تواصل معنا</a>
+        </div>
+
+        <div class="contact-strip" id="contactQuick">
+          <div class="c-item">
+            <span class="c-label t" data-ar="واتساب:" data-en="WhatsApp:">واتساب:</span>
+            <a class="c-link" href="https://wa.me/218923167702" target="_blank" rel="noopener">0923167702</a>
           </div>
 
-          <div class="badges">
-            <div class="badge">أكثر من 30 سنة خبرة</div>
-            <div class="badge">جودة + اعتمادية</div>
-            <div class="badge">دعم وخدمة</div>
+          <div class="c-item">
+            <span class="c-label t" data-ar="هاتف:" data-en="Phone:">هاتف:</span>
+            <a class="c-link" href="tel:+218910060041">0910060041</a>
+            <span class="sep">/</span>
+            <a class="c-link" href="tel:+218918358715">0918358715</a>
+            <span class="sep">/</span>
+            <a class="c-link" href="tel:+218910272876">0910272876</a>
           </div>
 
-          <div class="hero-actions">
-            <a class="btn primary" href="#categories">استعرض الأقسام</a>
-            <a class="btn ghost" href="contact.html" data-i18n="price">اطلب تسعيرة</a>
+          <div class="c-item">
+            <span class="c-label t" data-ar="البريد:" data-en="Email:">البريد:</span>
+            <a class="c-link" href="mailto:al_mutamayiz_tools@yahoo.com">al_mutamayiz_tools@yahoo.com</a>
           </div>
 
-          <div class="quick">
-            <div class="row">
-              <div class="item"><b>واتساب:</b> 0923167702</div>
-              <div class="item"><b>هاتف:</b> 0910060041 / 0918358715 / 0910272876</div>
-              <div class="item"><b>البريد:</b> al_mutamayiz_tools@yahoo.com</div>
-              <div class="item"><b>فيسبوك:</b> صفحة الشركة</div>
+          <div class="c-item">
+            <span class="c-label t" data-ar="فيسبوك:" data-en="Facebook:">فيسبوك:</span>
+            <a class="c-link" href="https://www.facebook.com/share/19Pcy5dsSK/?mibextid=wwXIfr" target="_blank" rel="noopener">
+              <span class="t" data-ar="صفحة الشركة" data-en="Company Page">صفحة الشركة</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="glass-card">
+          <div class="card-top">
+            <span class="card-mark">AM</span>
+            <div class="card-title">
+              <strong>AL MUTAMAYIZ AL HADIT</strong>
+              <small class="t" data-ar="توريد معدات موثوقة ترفع الكفاءة والإنتاجية" data-en="Reliable supply that boosts efficiency & productivity">
+                توريد معدات موثوقة ترفع الكفاءة والإنتاجية
+              </small>
             </div>
           </div>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="num">30+</div>
+              <div class="txt t" data-ar="سنوات خبرة" data-en="Years Experience">سنوات خبرة</div>
+            </div>
+            <div class="stat">
+              <div class="num">✓</div>
+              <div class="txt t" data-ar="جودة معتمدة" data-en="Trusted Quality">جودة معتمدة</div>
+            </div>
+            <div class="stat">
+              <div class="num">★</div>
+              <div class="txt t" data-ar="خدمة ممتازة" data-en="Great Service">خدمة ممتازة</div>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <a class="btn mini primary t" data-ar="اطلب تسعيرة" data-en="Request Quote" href="contact.html">اطلب تسعيرة</a>
+            <a class="btn mini ghost t" data-ar="مراسلة واتساب" data-en="WhatsApp" href="https://wa.me/218923167702" target="_blank" rel="noopener">مراسلة واتساب</a>
+          </div>
         </div>
       </div>
-
-      <div class="info">
-        <h2>AL MUTAMAYIZ AL HADIT</h2>
-        <p>
-          توريد معدات موثوقة ترفع الكفاءة والإنتاجية لورشكم ومصانعكم، مع خدمة احترافية ومصادر معتمدة.
-        </p>
-        <div class="stats">
-          <div class="stat">
-            <div class="n">30+</div>
-            <div class="t">سنوات خبرة</div>
-          </div>
-          <div class="stat">
-            <div class="n">✓</div>
-            <div class="t">مصادر موثوقة</div>
-          </div>
-          <div class="stat">
-            <div class="n">★</div>
-            <div class="t">خدمة ممتازة</div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
   <!-- ABOUT -->
   <section class="section" id="about">
     <div class="container">
-      <div class="section-title">
-        <h2 data-i18n="about">من نحن</h2>
-        <p>خبرة طويلة — جودة — التزام</p>
+      <div class="section-head">
+        <h2 class="t" data-ar="من نحن" data-en="About Us">من نحن</h2>
+        <p class="muted t" data-ar="خبرة طويلة — جودة — التزام" data-en="Long Experience — Quality — Commitment">
+          خبرة طويلة — جودة — التزام
+        </p>
       </div>
 
-      <div class="card">
-        <p>
-          شركة المتميز الحديث هي شركة ليبية رائدة في مجال استيراد وتوريد معدات وتجهيزات الورش والمصانع،
-          والعدد اليدوية والكهربائية، ومستلزمات السلامة المهنية. نمتلك خبرة تمتد لأكثر من 30 عامًا في هذا المجال،
-          مما جعلنا من الأسماء الموثوقة في السوق الليبي.
+      <div class="paper">
+        <p class="t"
+          data-ar="شركة المتميز الحديث هي شركة ليبية رائدة في مجال استيراد وتوريد معدات وتجهيزات الورش والمصانع، والعدد اليدوية والكهربائية، ومستلزمات السلامة المهنية. نمتلك خبرة تمتد لأكثر من 30 عامًا، مما جعلنا من الأسماء الموثوقة في السوق الليبي."
+          data-en="AL MUTAMAYIZ AL HADIT is a leading Libyan company specialized in importing and supplying workshop & industrial equipment, power/hand tools, and safety supplies. With 30+ years of experience, we have become a trusted name in the Libyan market.">
+          شركة المتميز الحديث هي شركة ليبية رائدة في مجال استيراد وتوريد معدات وتجهيزات الورش والمصانع، والعدد اليدوية والكهربائية، ومستلزمات السلامة المهنية. نمتلك خبرة تمتد لأكثر من 30 عامًا، مما جعلنا من الأسماء الموثوقة في السوق الليبي.
         </p>
-        <p>
-          نعمل على توفير منتجات عالية الجودة من أفضل المصادر والعلامات التجارية، لتلبية احتياجات الورش،
-          المصانع، الشركات، والفنيين، مع الحرص الدائم على مواكبة التطور التقني ومتطلبات السوق.
+
+        <p class="t"
+          data-ar="نعمل على توفير منتجات عالية الجودة من أفضل المصادر والعلامات التجارية لتلبية احتياجات الورش، المصانع، الشركات، والفنيين، مع الحرص على مواكبة التطور التقني ومتطلبات السوق."
+          data-en="We deliver high-quality products from reliable sources and brands to serve workshops, factories, companies, and technicians—always keeping up with technology and market needs.">
+          نعمل على توفير منتجات عالية الجودة من أفضل المصادر والعلامات التجارية لتلبية احتياجات الورش، المصانع، الشركات، والفنيين، مع الحرص على مواكبة التطور التقني ومتطلبات السوق.
         </p>
-        <p>
-          تقوم رؤيتنا على تقديم حلول متكاملة وعملية، تجمع بين الجودة، الاعتمادية، والأسعار المناسبة،
-          مع الالتزام بأعلى معايير الخدمة والدعم الفني. كما نسعى لبناء علاقات طويلة الأمد مع عملائنا تقوم على
-          الثقة والشفافية.
-        </p>
-        <p>
-          هدفنا هو المساهمة الفعلية في تطوير قطاع الورش والصناعات داخل ليبيا، ودعم المشاريع الصغيرة والمتوسطة،
-          من خلال توفير معدات موثوقة تساعد على رفع الكفاءة والإنتاجية.
+
+        <p class="t"
+          data-ar="رؤيتنا تقديم حلول متكاملة تجمع بين الجودة والاعتمادية والأسعار المناسبة، مع الالتزام بأعلى معايير الخدمة والدعم الفني، وبناء علاقات طويلة الأمد تقوم على الثقة والشفافية."
+          data-en="Our vision is to provide complete solutions combining quality, reliability, and fair pricing—backed by strong service and support, and long-term relationships built on trust and transparency.">
+          رؤيتنا تقديم حلول متكاملة تجمع بين الجودة والاعتمادية والأسعار المناسبة، مع الالتزام بأعلى معايير الخدمة والدعم الفني، وبناء علاقات طويلة الأمد تقوم على الثقة والشفافية.
         </p>
       </div>
     </div>
@@ -143,54 +174,67 @@
   <!-- CATEGORIES -->
   <section class="section" id="categories">
     <div class="container">
-      <div class="section-title">
-        <h2 data-i18n="cats">الأقسام</h2>
-        <p>اضغط على القسم للانتقال مباشرة لصفحته</p>
+      <div class="section-head">
+        <h2 class="t" data-ar="الأقسام" data-en="Categories">الأقسام</h2>
+        <p class="muted t" data-ar="اضغط على القسم للانتقال مباشرة" data-en="Tap a category to open it directly">
+          اضغط على القسم للانتقال مباشرة
+        </p>
       </div>
 
-      <div class="grid">
-        <a class="category" href="electrical.html">
-          <div class="top">
-            <div class="pill">قسم</div>
-            <div class="icon">⚡</div>
-          </div>
-          <h3>المعدات الكهربائية</h3>
-          <p>أدوات ومعدات كهربائية احترافية للورش والصناعة.</p>
-          <span class="go">المزيد ←</span>
+      <div class="grid-3">
+        <a class="cat-card" href="electrical.html">
+          <div class="cat-ico">⚡</div>
+          <h3 class="t" data-ar="المعدات الكهربائية" data-en="Electrical Equipment">المعدات الكهربائية</h3>
+          <p class="t" data-ar="عدد ومعدات كهربائية احترافية للورش والصناعة." data-en="Professional electrical tools & equipment for workshops and industry.">
+            عدد ومعدات كهربائية احترافية للورش والصناعة.
+          </p>
+          <span class="more t" data-ar="افتح القسم" data-en="Open Category">افتح القسم</span>
         </a>
 
-        <a class="category" href="industrial.html">
-          <div class="top">
-            <div class="pill">قسم</div>
-            <div class="icon">🏭</div>
-          </div>
-          <h3>المعدات الصناعية</h3>
-          <p>معدات وحلول صناعية عالية الاعتمادية للشركات والمصانع.</p>
-          <span class="go">المزيد ←</span>
+        <a class="cat-card" href="mechanical.html">
+          <div class="cat-ico">⚙️</div>
+          <h3 class="t" data-ar="المعدات الميكانيكية" data-en="Mechanical Equipment">المعدات الميكانيكية</h3>
+          <p class="t" data-ar="معدات ميكانيكية وحلول عملية للورش والمصانع." data-en="Mechanical equipment and practical solutions for workshops & factories.">
+            معدات ميكانيكية وحلول عملية للورش والمصانع.
+          </p>
+          <span class="more t" data-ar="افتح القسم" data-en="Open Category">افتح القسم</span>
         </a>
 
-        <a class="category" href="workshop.html">
-          <div class="top">
-            <div class="pill">قسم</div>
-            <div class="icon">🛠️</div>
-          </div>
-          <h3>تجهيزات الورش</h3>
-          <p>تجهيزات عملية وحلول متكاملة لورش الصيانة والخدمات.</p>
-          <span class="go">المزيد ←</span>
+        <a class="cat-card" href="lubrication.html">
+          <div class="cat-ico">🛢️</div>
+          <h3 class="t" data-ar="التزييت والتشحيم" data-en="Lubrication & Greasing">التزييت والتشحيم</h3>
+          <p class="t" data-ar="معدات وأنظمة التزييت والتشحيم للورش والمعدات." data-en="Lubrication & greasing systems for workshops and machinery.">
+            معدات وأنظمة التزييت والتشحيم للورش والمعدات.
+          </p>
+          <span class="more t" data-ar="افتح القسم" data-en="Open Category">افتح القسم</span>
         </a>
+      </div>
+
+      <div class="cta-bar">
+        <a class="btn primary t" data-ar="اطلب تسعيرة / تواصل الآن" data-en="Request a Quote / Contact Now" href="contact.html">اطلب تسعيرة / تواصل الآن</a>
+        <a class="btn ghost t" data-ar="مراسلة واتساب" data-en="WhatsApp" href="https://wa.me/218923167702" target="_blank" rel="noopener">مراسلة واتساب</a>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <div><b>شركة المتميز الحديث</b> — AL MUTAMAYIZ AL HADIT</div>
-      <div class="links">
-        <a href="#about" data-i18n="about">من نحن</a>
-        <a href="#categories" data-i18n="cats">الأقسام</a>
-        <a href="contact.html" data-i18n="contact">اتصل بنا</a>
+    <div class="container foot-inner">
+      <div class="foot-brand">
+        <strong class="t" data-ar="شركة المتميز الحديث" data-en="AL MUTAMAYIZ AL HADIT">شركة المتميز الحديث</strong>
+        <small>AL MUTAMAYIZ AL HADIT</small>
       </div>
-      <div class="copy">© جميع الحقوق محفوظة</div>
+
+      <div class="foot-links">
+        <a class="t" data-ar="من نحن" data-en="About" href="#about">من نحن</a>
+        <a class="t" data-ar="الأقسام" data-en="Categories" href="#categories">الأقسام</a>
+        <a class="t" data-ar="اتصل بنا" data-en="Contact" href="contact.html">اتصل بنا</a>
+        <a href="https://www.facebook.com/share/19Pcy5dsSK/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
+      </div>
+
+      <div class="foot-copy t" data-ar="© جميع الحقوق محفوظة - شركة المتميز الحديث" data-en="© All Rights Reserved - AL MUTAMAYIZ AL HADIT">
+        © جميع الحقوق محفوظة - شركة المتميز الحديث
+      </div>
     </div>
   </footer>
 
