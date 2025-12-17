@@ -1,43 +1,71 @@
-(function () {
-  // Mobile menu
-  const toggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector(".nav");
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      const open = nav.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
-    });
+// ============================
+// Mobile menu
+// ============================
+function openMenu() {
+  document.getElementById("mobileNav").style.display = "block";
+}
+function closeMenu() {
+  document.getElementById("mobileNav").style.display = "none";
+}
+
+// close menu when clicking outside panel
+document.addEventListener("click", (e) => {
+  const nav = document.getElementById("mobileNav");
+  if (!nav || nav.style.display !== "block") return;
+  if (e.target.id === "mobileNav") closeMenu();
+});
+
+// ============================
+// Language toggle (AR / EN)
+// ============================
+let currentLang = localStorage.getItem("lang") || "ar";
+
+const dict = {
+  ar: {
+    home: "الرئيسية",
+    about: "من نحن",
+    cats: "الأقسام",
+    contact: "اتصل بنا",
+    price: "اطلب تسعيرة",
+    backHome: "رجوع للرئيسية",
+    featured: "أبرز المنتجات",
+    note: "بدّل الأسماء والصور حسب المتوفر عندك.",
+  },
+  en: {
+    home: "Home",
+    about: "About",
+    cats: "Categories",
+    contact: "Contact",
+    price: "Request Quote",
+    backHome: "Back to Home",
+    featured: "Featured Products",
+    note: "Replace names & images based on what you have.",
   }
+};
 
-  // Language
-  const langBtn = document.getElementById("langBtn");
-  const html = document.documentElement;
+function applyLang(lang){
+  currentLang = lang;
+  localStorage.setItem("lang", lang);
 
-  function setLang(mode) {
-    const isEn = mode === "en";
-    html.lang = isEn ? "en" : "ar";
-    html.dir = isEn ? "ltr" : "rtl";
+  // direction
+  document.documentElement.lang = (lang === "ar") ? "ar" : "en";
+  document.documentElement.dir = (lang === "ar") ? "rtl" : "ltr";
 
-    document.querySelectorAll("[data-ar][data-en]").forEach(el => {
-      el.textContent = isEn ? el.getAttribute("data-en") : el.getAttribute("data-ar");
-    });
+  // translate any element with data-i18n
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key = el.getAttribute("data-i18n");
+    if (dict[lang] && dict[lang][key]) el.textContent = dict[lang][key];
+  });
 
-    // placeholders
-    document.querySelectorAll("[data-ar-placeholder][data-en-placeholder]").forEach(el => {
-      el.setAttribute("placeholder", isEn ? el.getAttribute("data-en-placeholder") : el.getAttribute("data-ar-placeholder"));
-    });
+  // update lang button text
+  const btn = document.getElementById("langBtn");
+  if (btn) btn.textContent = (lang === "ar") ? "EN" : "AR";
+}
 
-    if (langBtn) langBtn.textContent = isEn ? "AR" : "EN";
-    localStorage.setItem("siteLang", mode);
-  }
+function toggleLang(){
+  applyLang(currentLang === "ar" ? "en" : "ar");
+}
 
-  const saved = localStorage.getItem("siteLang") || "ar";
-  setLang(saved);
-
-  if (langBtn) {
-    langBtn.addEventListener("click", () => {
-      const current = localStorage.getItem("siteLang") || "ar";
-      setLang(current === "ar" ? "en" : "ar");
-    });
-  }
-})();
+document.addEventListener("DOMContentLoaded", ()=>{
+  applyLang(currentLang);
+});
