@@ -6,89 +6,91 @@
   <title>اتصل بنا | AL MUTAMAYIZ AL HADIT</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
-  <a class="whatsapp" href="https://wa.me/218923167702" target="_blank" rel="noopener">واتساب</a>
+<body>
+  <a class="whatsapp-float" href="https://wa.me/218923167702" target="_blank" rel="noopener">واتساب</a>
 
   <header class="site-header">
     <div class="container header-inner">
+      <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+
       <a class="brand" href="index.html">
-        <div class="brand-logo"><img src="images/logo.svg" alt="Logo"></div>
-        <div class="brand-text">
-          <h1>شركة المتميز الحديث</h1>
-          <p>AL MUTAMAYIZ AL HADIT</p>
-        </div>
+        <span class="logo-icon">AM</span>
+        <span class="brand-text">
+          <strong class="t" data-ar="شركة المتميز الحديث" data-en="AL MUTAMAYIZ AL HADIT">شركة المتميز الحديث</strong>
+          <small class="t" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</small>
+        </span>
       </a>
 
-      <nav class="nav">
-        <a href="index.html" data-i18n="home">الرئيسية</a>
-        <a href="electrical.html">المعدات الكهربائية</a>
-        <a href="industrial.html">المعدات الصناعية</a>
-        <a href="workshop.html">تجهيزات الورش</a>
-        <a href="contact.html" class="active" data-i18n="contact">اتصل بنا</a>
-      </nav>
-
       <div class="header-actions">
-        <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
-        <button class="menu-btn" onclick="openMenu()" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
+        <button class="lang-btn" id="langBtn" type="button">EN</button>
       </div>
     </div>
+
+    <nav class="mobile-nav" id="mobileNav">
+      <a class="t" data-ar="الرئيسية" data-en="Home" href="index.html">الرئيسية</a>
+      <a href="electrical.html" class="t" data-ar="المعدات الكهربائية" data-en="Electrical">المعدات الكهربائية</a>
+      <a href="mechanical.html" class="t" data-ar="المعدات الميكانيكية" data-en="Mechanical">المعدات الميكانيكية</a>
+      <a href="lubrication.html" class="t" data-ar="التزييت والتشحيم" data-en="Lubrication">التزييت والتشحيم</a>
+    </nav>
   </header>
 
-  <div class="mobile-nav" id="mobileNav">
-    <div class="panel">
-      <div class="close">
-        <span>Menu</span>
-        <button class="lang-btn" onclick="closeMenu()">✕</button>
-      </div>
-      <a href="index.html" data-i18n="home">الرئيسية</a>
-      <a href="electrical.html">المعدات الكهربائية</a>
-      <a href="industrial.html">المعدات الصناعية</a>
-      <a href="workshop.html">تجهيزات الورش</a>
-      <a href="contact.html" data-i18n="contact">اتصل بنا</a>
-    </div>
-  </div>
-
-  <section class="page-hero">
+  <main class="section">
     <div class="container">
-      <div class="page-box">
-        <div class="top">
-          <div>
-            <div class="pill">تواصل</div>
-            <h2 data-i18n="contact">اتصل بنا</h2>
-            <p>جاهزين لخدمتك — اطلب تسعيرة أو استفسار.</p>
+      <div class="section-card">
+        <div class="section-badge t" data-ar="تواصل" data-en="Contact">تواصل</div>
+        <h1 class="page-title t" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</h1>
+        <p class="page-sub t"
+           data-ar="اطلب تسعيرة أو استفسار — رد سريع عبر واتساب."
+           data-en="Request a quote or ask a question — fast reply on WhatsApp.">
+          اطلب تسعيرة أو استفسار — رد سريع عبر واتساب.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-box">
+            <h3 class="t" data-ar="واتساب" data-en="WhatsApp">واتساب</h3>
+            <a class="contact-link" href="https://wa.me/218923167702" target="_blank" rel="noopener">0923167702</a>
           </div>
-          <div class="icon">☎</div>
+
+          <div class="contact-box">
+            <h3 class="t" data-ar="هواتف" data-en="Phones">هواتف</h3>
+            <div class="phones">
+              <a class="contact-link" href="tel:+218910060041">0910060041</a>
+              <a class="contact-link" href="tel:+218918358715">0918358715</a>
+              <a class="contact-link" href="tel:+218910272876">0910272876</a>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <h3 class="t" data-ar="البريد" data-en="Email">البريد</h3>
+            <a class="contact-link" href="mailto:al_mutamayiz_tools@yahoo.com">al_mutamayiz_tools@yahoo.com</a>
+          </div>
+
+          <div class="contact-box">
+            <h3 class="t" data-ar="فيسبوك" data-en="Facebook">فيسبوك</h3>
+            <a class="contact-link" href="https://www.facebook.com/share/19Pcy5dsSK/?mibextid=wwXIfr" target="_blank" rel="noopener">
+              <span class="t" data-ar="صفحة الشركة" data-en="Company Page">صفحة الشركة</span>
+            </a>
+          </div>
         </div>
 
-        <div class="hero-actions" style="margin-top:12px;">
-          <a class="btn primary" href="index.html" data-i18n="backHome">رجوع للرئيسية</a>
-          <a class="btn ghost" href="https://wa.me/218923167702" target="_blank" rel="noopener">مراسلة واتساب</a>
+        <div class="page-actions">
+          <a class="btn ghost t" data-ar="رجوع للرئيسية" data-en="Back Home" href="index.html">رجوع للرئيسية</a>
+          <a class="btn primary t" data-ar="مراسلة واتساب الآن" data-en="WhatsApp Now" href="https://wa.me/218923167702" target="_blank" rel="noopener">مراسلة واتساب الآن</a>
         </div>
       </div>
     </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="card">
-        <p><b>واتساب:</b> <a href="https://wa.me/218923167702" target="_blank" rel="noopener">0923167702</a></p>
-        <p><b>هاتف:</b> <a href="tel:+218910060041">0910060041</a> / <a href="tel:+218918358715">0918358715</a> / <a href="tel:+218910272876">0910272876</a></p>
-        <p><b>البريد:</b> <a href="mailto:al_mutamayiz_tools@yahoo.com">al_mutamayiz_tools@yahoo.com</a></p>
-        <p><b>فيسبوك:</b> <a href="https://www.facebook.com/share/19Pcy5dsSK/?mibextid=wwXIfr" target="_blank" rel="noopener">صفحة الشركة</a></p>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <footer class="footer">
-    <div class="container footer-inner">
-      <div><b>شركة المتميز الحديث</b> — AL MUTAMAYIZ AL HADIT</div>
-      <div class="links">
-        <a href="index.html" data-i18n="home">الرئيسية</a>
+    <div class="container foot-inner">
+      <div class="foot-brand">
+        <strong class="t" data-ar="شركة المتميز الحديث" data-en="AL MUTAMAYIZ AL HADIT">شركة المتميز الحديث</strong>
+        <small>AL MUTAMAYIZ AL HADIT</small>
       </div>
-      <div class="copy">© جميع الحقوق محفوظة</div>
+      <div class="foot-copy t" data-ar="© جميع الحقوق محفوظة - شركة المتميز الحديث" data-en="© All Rights Reserved - AL MUTAMAYIZ AL HADIT">
+        © جميع الحقوق محفوظة - شركة المتميز الحديث
+      </div>
     </div>
   </footer>
 
