@@ -398,3 +398,65 @@ input, textarea{
   .nav.open{display:flex}
   .nav a, .lang-btn{justify-content:center}
 }
+/* ====== MOBILE FIXES ====== */
+@media (max-width: 768px) {
+
+  /* تقليل الهامش العلوي */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  header.topbar {
+    padding: 12px 14px;
+  }
+
+  .section {
+    padding: 20px 14px !important;
+  }
+
+  /* العناوين */
+  h1, h2, h3 {
+    line-height: 1.4;
+    margin-bottom: 10px;
+    color: #0f2f2e; /* لون غامق وواضح */
+  }
+
+  /* النصوص */
+  p, .muted {
+    color: #344d4b !important;
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  /* كروت الأقسام */
+  .page-hero,
+  .card {
+    padding: 18px !important;
+    margin-bottom: 18px;
+  }
+
+  /* المنتجات */
+  .products-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px;
+  }
+
+  .product-card {
+    padding: 14px;
+  }
+
+  /* أيقونة الصورة */
+  .product-img {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  /* زر واتساب */
+  .whatsapp-float {
+    bottom: 16px;
+    right: 16px;
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
