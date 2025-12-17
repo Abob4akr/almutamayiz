@@ -3,105 +3,133 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>المعدات الكهربائية | شركة المتميز الحديث</title>
+  <title>المعدات الكهربائية | AL MUTAMAYIZ AL HADIT</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- زر واتساب عائم -->
-  <a class="whatsapp-float" href="https://wa.me/218923167702" target="_blank" rel="noopener">واتساب</a>
+  <a class="whatsapp" href="https://wa.me/218923167702" target="_blank" rel="noopener">واتساب</a>
 
-  <!-- شريط علوي -->
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div class="brand">
-        <div class="brand-mark">AM</div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-logo"><img src="images/logo.svg" alt="Logo"></div>
         <div class="brand-text">
           <h1>شركة المتميز الحديث</h1>
           <p>AL MUTAMAYIZ AL HADIT</p>
         </div>
-      </div>
+      </a>
 
       <nav class="nav">
-        <a href="index.html">الرئيسية</a>
-        <a href="electrical.html" class="active">الكهربائية</a>
-        <a href="industrial.html">الصناعية</a>
+        <a href="index.html" data-i18n="home">الرئيسية</a>
+        <a href="electrical.html" class="active">المعدات الكهربائية</a>
+        <a href="industrial.html">المعدات الصناعية</a>
         <a href="workshop.html">تجهيزات الورش</a>
-        <a href="contact.html">اتصل بنا</a>
+        <a href="contact.html" data-i18n="contact">اتصل بنا</a>
       </nav>
+
+      <div class="header-actions">
+        <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+        <button class="menu-btn" onclick="openMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main class="section">
+  <div class="mobile-nav" id="mobileNav">
+    <div class="panel">
+      <div class="close">
+        <span>Menu</span>
+        <button class="lang-btn" onclick="closeMenu()">✕</button>
+      </div>
+      <a href="index.html" data-i18n="home">الرئيسية</a>
+      <a href="electrical.html">المعدات الكهربائية</a>
+      <a href="industrial.html">المعدات الصناعية</a>
+      <a href="workshop.html">تجهيزات الورش</a>
+      <a href="contact.html" data-i18n="contact">اتصل بنا</a>
+    </div>
+  </div>
+
+  <section class="page-hero">
     <div class="container">
-      <div class="page-hero card">
-        <span class="pill">قسم</span>
-        <h2>المعدات الكهربائية</h2>
-        <p class="muted">
-          أدوات ومعدات كهربائية احترافية للورش والصناعة، مع جودة واعتمادية عالية.
-        </p>
-
-        <div class="hero-badges">
-          <span class="badge">جودة عالية</span>
-          <span class="badge">اعتمادية</span>
-          <span class="badge">خدمة ودعم</span>
+      <div class="page-box">
+        <div class="top">
+          <div>
+            <div class="pill">قسم</div>
+            <h2>المعدات الكهربائية</h2>
+            <p>أدوات ومعدات كهربائية احترافية للورش والصناعة.</p>
+          </div>
+          <div class="icon">⚡</div>
         </div>
 
-        <div class="hero-actions">
-          <a class="btn primary" href="contact.html">اطلب تسعيرة</a>
-          <a class="btn" href="index.html">رجوع للرئيسية</a>
+        <div class="hero-actions" style="margin-top:12px;">
+          <a class="btn primary" href="index.html" data-i18n="backHome">رجوع للرئيسية</a>
+          <a class="btn ghost" href="contact.html" data-i18n="price">اطلب تسعيرة</a>
         </div>
-      </div>
-
-      <div class="section-title" style="margin-top:22px">
-        <h2>أبرز المنتجات</h2>
-        <p>بدّل الأسماء والصور حسب البضاعة الموجودة عندك.</p>
-      </div>
-
-      <div class="products-grid">
-        <a class="product-card" href="#">
-          <div class="product-img">📷</div>
-          <div class="product-info">
-            <h3>دريل / شنيور</h3>
-            <p class="muted">معدات كهربائية للورش والأعمال اليومية.</p>
-          </div>
-        </a>
-
-        <a class="product-card" href="#">
-          <div class="product-img">📷</div>
-          <div class="product-info">
-            <h3>صاروخ (جلخ)</h3>
-            <p class="muted">قوة وتحمل وجودة تشغيل.</p>
-          </div>
-        </a>
-
-        <a class="product-card" href="#">
-          <div class="product-img">📷</div>
-          <div class="product-info">
-            <h3>هلتي تكسير</h3>
-            <p class="muted">حلول قوية للأعمال الشاقة.</p>
-          </div>
-        </a>
       </div>
     </div>
-  </main>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="featured">أبرز المنتجات</h2>
+        <p data-i18n="note">بدّل الأسماء والصور حسب المتوفر عندك.</p>
+      </div>
+
+      <div class="products">
+        <div class="product">
+          <div class="img"><img src="images/IMG_9440.jpg" alt="Generator"></div>
+          <div class="body">
+            <h4>مولدات كهرباء</h4>
+            <p>أداء قوي للأعمال والورش والمصانع.</p>
+            <div class="actions">
+              <a class="small-btn" href="index.html" data-i18n="backHome">رجوع</a>
+              <a class="small-btn primary" href="contact.html" data-i18n="price">تسعيرة</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="img"><img src="images/IMG_9441.jpg" alt="Compressor"></div>
+          <div class="body">
+            <h4>كمبروسر</h4>
+            <p>تشغيل مستقر للاستخدام الصناعي والمهني.</p>
+            <div class="actions">
+              <a class="small-btn" href="index.html" data-i18n="backHome">رجوع</a>
+              <a class="small-btn primary" href="contact.html" data-i18n="price">تسعيرة</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="img"><img src="images/IMG_9442.jpg" alt="Power tools"></div>
+          <div class="body">
+            <h4>عدد كهربائية</h4>
+            <p>معدات مناسبة للورش، الصيانة، والتركيب.</p>
+            <div class="actions">
+              <a class="small-btn" href="index.html" data-i18n="backHome">رجوع</a>
+              <a class="small-btn primary" href="contact.html" data-i18n="price">تسعيرة</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div>
-        <h4>شركة المتميز الحديث</h4>
-        <p>AL MUTAMAYIZ AL HADIT</p>
+      <div><b>شركة المتميز الحديث</b> — AL MUTAMAYIZ AL HADIT</div>
+      <div class="links">
+        <a href="index.html" data-i18n="home">الرئيسية</a>
+        <a href="contact.html" data-i18n="contact">اتصل بنا</a>
       </div>
-
-      <div class="footer-links">
-        <a href="index.html">الرئيسية</a>
-        <a href="contact.html">اتصل بنا</a>
-        <a href="https://www.facebook.com/share/19Pcy5dsSK/?mibextid=wwXIfr" target="_blank" rel="noopener">فيسبوك</a>
-      </div>
-
-      <div class="footer-copy">© جميع الحقوق محفوظة - شركة المتميز الحديث</div>
+      <div class="copy">© جميع الحقوق محفوظة</div>
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
