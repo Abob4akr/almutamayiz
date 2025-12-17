@@ -1,93 +1,235 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>المعدات الكهربائية | شركة المتميز الحديث</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>شركة المتميز الحديث | AL MUTAMAYIZ AL HADIT</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <!-- WhatsApp Floating -->
+  <a class="whatsapp-float" href="https://wa.me/218923167702" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <span>واتساب</span>
+  </a>
 
-<header>
-  <div class="container header-inner">
-    <div class="brand">
-      <div class="brand-mark">AM</div>
-      <div class="brand-text">
-        <strong>شركة المتميز الحديث</strong>
-        <small>AL MUTAMAYIZ AL HADIT</small>
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <div class="brand-mark">AM</div>
+        <div class="brand-text">
+          <div class="brand-ar" data-ar="شركة المتميز الحديث" data-en="Al Mutamayiz Al Hadit">شركة المتميز الحديث</div>
+          <div class="brand-en">AL MUTAMAYIZ AL HADIT</div>
+        </div>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav class="nav" id="mainNav">
+        <a href="index.html" class="active" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="#about" data-ar="من نحن" data-en="About">من نحن</a>
+        <a href="#categories" data-ar="الأقسام" data-en="Categories">الأقسام</a>
+        <a href="contact.html" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
+        <button class="lang-btn" type="button" id="langBtn" aria-label="Language">EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1 class="hero-title" data-ar="حلول احترافية لمعدات وتجهيزات الورش والمصانع" data-en="Professional solutions for workshop & industrial equipment">
+          حلول احترافية لمعدات وتجهيزات الورش والمصانع
+        </h1>
+
+        <p class="hero-sub" data-ar="استيراد وتوريد العدد اليدوية والكهربائية، معدات الورش والمصانع، ومستلزمات السلامة المهنية."
+           data-en="Import & supply of hand and power tools, workshop/industrial equipment, and occupational safety supplies.">
+          استيراد وتوريد العدد اليدوية والكهربائية، معدات الورش والمصانع، ومستلزمات السلامة المهنية.
+        </p>
+
+        <div class="hero-badges">
+          <span class="badge" data-ar="أكثر من 30 سنة خبرة" data-en="30+ years experience">أكثر من 30 سنة خبرة</span>
+          <span class="badge" data-ar="جودة + اعتمادية" data-en="Quality + Reliability">جودة + اعتمادية</span>
+          <span class="badge" data-ar="خدمة ودعم" data-en="Service & Support">خدمة ودعم</span>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#categories" data-ar="استعرض الأقسام" data-en="Browse Categories">استعرض الأقسام</a>
+          <a class="btn" href="contact.html" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</a>
+        </div>
+
+        <div class="quick-contact">
+          <div class="qc-title" data-ar="بيانات التواصل السريعة" data-en="Quick Contact">بيانات التواصل السريعة</div>
+
+          <div class="qc-row">
+            <div class="qc-item">
+              <span class="qc-label" data-ar="واتساب:" data-en="WhatsApp:">واتساب:</span>
+              <a class="qc-link" href="https://wa.me/218923167702" target="_blank" rel="noopener">0923167702</a>
+            </div>
+
+            <div class="qc-item">
+              <span class="qc-label" data-ar="هاتف:" data-en="Phone:">هاتف:</span>
+              <a class="qc-link" href="tel:+218910060041">0910060041</a>
+              <span class="sep">/</span>
+              <a class="qc-link" href="tel:+218918358715">0918358715</a>
+              <span class="sep">/</span>
+              <a class="qc-link" href="tel:+218910272876">0910272876</a>
+            </div>
+          </div>
+
+          <div class="qc-row">
+            <div class="qc-item">
+              <span class="qc-label" data-ar="البريد:" data-en="Email:">البريد:</span>
+              <a class="qc-link" href="mailto:al_mutamayiz_tools@yahoo.com">al_mutamayiz_tools@yahoo.com</a>
+            </div>
+
+            <div class="qc-item">
+              <span class="qc-label" data-ar="فيسبوك:" data-en="Facebook:">فيسبوك:</span>
+              <a class="qc-link" href="https://www.facebook.com/share/19Pcy5dsSK/?mibextid=wwXIfr" target="_blank" rel="noopener" data-ar="صفحة الشركة" data-en="Company Page">صفحة الشركة</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <div class="chip" data-ar="شركة ليبية" data-en="Libyan Company">شركة ليبية</div>
+            <div class="chip" data-ar="توريد موثوق" data-en="Trusted Supply">توريد موثوق</div>
+          </div>
+
+          <img class="hero-img" src="images/hero.jpg" alt="AL MUTAMAYIZ" />
+
+          <div class="hero-card-body">
+            <h2 class="mini-title">AL MUTAMAYIZ AL HADIT</h2>
+            <p class="mini-text" data-ar="معدات موثوقة ترفع الكفاءة والإنتاجية لورشكم ومصانعكم."
+               data-en="Reliable equipment to boost efficiency and productivity for your workshops and factories.">
+              معدات موثوقة ترفع الكفاءة والإنتاجية لورشكم ومصانعكم.
+            </p>
+
+            <div class="mini-stats">
+              <div class="stat">
+                <div class="num">30+</div>
+                <div class="txt" data-ar="سنوات خبرة" data-en="Years Experience">سنوات خبرة</div>
+              </div>
+              <div class="stat">
+                <div class="num">✓</div>
+                <div class="txt" data-ar="مصادر موثوقة" data-en="Trusted Sources">مصادر موثوقة</div>
+              </div>
+              <div class="stat">
+                <div class="num">★</div>
+                <div class="txt" data-ar="خدمة ممتازة" data-en="Great Service">خدمة ممتازة</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-ar="من نحن" data-en="About Us">من نحن</h2>
+        <p data-ar="خبرة طويلة — جودة — التزام" data-en="Long experience — Quality — Commitment">خبرة طويلة — جودة — التزام</p>
+      </div>
+
+      <div class="card">
+        <p data-ar="شركة المتميز الحديث هي شركة ليبية رائدة في مجال استيراد وتوريد معدات وتجهيزات الورش والمصانع، والعدد اليدوية والكهربائية، ومستلزمات السلامة المهنية. نمتلك خبرة تمتد لأكثر من 30 عامًا في هذا المجال، مما جعلنا من الأسماء الموثوقة في السوق الليبي."
+           data-en="Al Mutamayiz Al Hadit is a leading Libyan company specialized in importing and supplying workshop & industrial equipment, hand and power tools, and occupational safety supplies. With over 30 years of experience, we are among the trusted names in the Libyan market.">
+          شركة المتميز الحديث هي شركة ليبية رائدة في مجال استيراد وتوريد معدات وتجهيزات الورش والمصانع، والعدد اليدوية والكهربائية، ومستلزمات السلامة المهنية. نمتلك خبرة تمتد لأكثر من 30 عامًا في هذا المجال، مما جعلنا من الأسماء الموثوقة في السوق الليبي.
+        </p>
+
+        <p data-ar="نعمل على توفير منتجات عالية الجودة من أفضل المصادر والعلامات التجارية، لتلبية احتياجات الورش، المصانع، الشركات، والفنيين، مع الحرص الدائم على مواكبة التطور التقني ومتطلبات السوق."
+           data-en="We provide high-quality products from top sources and brands to serve workshops, factories, companies, and technicians, while keeping up with technical developments and market needs.">
+          نعمل على توفير منتجات عالية الجودة من أفضل المصادر والعلامات التجارية، لتلبية احتياجات الورش، المصانع، الشركات، والفنيين، مع الحرص الدائم على مواكبة التطور التقني ومتطلبات السوق.
+        </p>
+
+        <p data-ar="تقوم رؤيتنا على تقديم حلول متكاملة وعملية تجمع بين الجودة والاعتمادية والأسعار المناسبة، مع الالتزام بأعلى معايير الخدمة والدعم الفني. كما نسعى لبناء علاقات طويلة الأمد مع عملائنا تقوم على الثقة والشفافية."
+           data-en="Our vision is to deliver practical, integrated solutions combining quality, reliability, and fair pricing—backed by high standards of service and technical support. We build long-term relationships based on trust and transparency.">
+          تقوم رؤيتنا على تقديم حلول متكاملة وعملية تجمع بين الجودة والاعتمادية والأسعار المناسبة، مع الالتزام بأعلى معايير الخدمة والدعم الفني. كما نسعى لبناء علاقات طويلة الأمد مع عملائنا تقوم على الثقة والشفافية.
+        </p>
+
+        <p data-ar="هدفنا هو المساهمة الفعلية في تطوير قطاع الورش والصناعات داخل ليبيا، ودعم المشاريع الصغيرة والمتوسطة، من خلال توفير معدات موثوقة تساعد على رفع الكفاءة والإنتاجية."
+           data-en="Our goal is to contribute to developing the workshop and industrial sector in Libya and support SMEs by supplying reliable equipment that improves efficiency and productivity.">
+          هدفنا هو المساهمة الفعلية في تطوير قطاع الورش والصناعات داخل ليبيا، ودعم المشاريع الصغيرة والمتوسطة، من خلال توفير معدات موثوقة تساعد على رفع الكفاءة والإنتاجية.
+        </p>
       </div>
     </div>
+  </section>
 
-    <nav>
-      <a href="index.html">الرئيسية</a>
-      <a class="active" href="electrical.html">الكهربائية</a>
-      <a href="industrial.html">الصناعية</a>
-      <a href="workshop.html">الورش</a>
-      <a href="contact.html">اتصل بنا</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <h1>المعدات الكهربائية ⚡</h1>
-      <p>أدوات ومعدات كهربائية احترافية للورش والمصانع (عرض فقط — الأسعار حسب الطلب).</p>
-      <div class="badges">
-        <span class="badge">جودة عالية</span>
-        <span class="badge">اعتمادية</span>
-        <span class="badge">خدمة ودعم</span>
+  <!-- Categories -->
+  <section class="section" id="categories">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-ar="الأقسام" data-en="Categories">الأقسام</h2>
+        <p data-ar="اضغط على القسم للانتقال لصفحته" data-en="Tap a category to open its page">اضغط على القسم للانتقال لصفحته</p>
       </div>
-      <div class="btn-row">
-        <a class="btn primary" href="contact.html">اطلب تسعيرة</a>
-        <a class="btn" href="index.html">رجوع للرئيسية</a>
-      </div>
-    </div>
 
-    <div class="hero-card">
-      <h3>أهم المنتجات</h3>
-      <p style="margin:0; opacity:.95; line-height:1.9">
-        هيلتي تكسير – مناشير – جلاخات – درلات – ملحقات – أدوات قياس.
-      </p>
-      <div class="mini-stats">
-        <div class="stat"><div class="num">✓</div><div class="txt">أصلية</div></div>
-        <div class="stat"><div class="num">⚙</div><div class="txt">احترافية</div></div>
-        <div class="stat"><div class="num">★</div><div class="txt">متانة</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="card">
-      <h2 style="margin-top:0">الأصناف المتوفرة (مثال)</h2>
       <div class="grid">
-        <div class="item">هيلتي تكسير <small>ثقيل/خفيف</small></div>
-        <div class="item">دريل / شنيور <small>احترافي</small></div>
-        <div class="item">مناشير <small>قص/صاروخ</small></div>
-        <div class="item">جلّاخات <small>متعددة المقاسات</small></div>
-        <div class="item">ملحقات <small>رؤوس/أقراص</small></div>
-        <div class="item">أدوات قياس <small>ليزر/شريط</small></div>
+        <a class="category-card" href="electrical.html">
+          <div class="icon">⚡</div>
+          <h3 data-ar="المعدات الكهربائية" data-en="Electrical Tools">المعدات الكهربائية</h3>
+          <p data-ar="أدوات ومعدات كهربائية احترافية للورش والصناعة." data-en="Professional power tools & equipment for workshops and industry.">
+            أدوات ومعدات كهربائية احترافية للورش والصناعة.
+          </p>
+          <span class="more" data-ar="المزيد ←" data-en="Explore →">المزيد ←</span>
+        </a>
+
+        <a class="category-card" href="industrial.html">
+          <div class="icon">🏭</div>
+          <h3 data-ar="المعدات الصناعية" data-en="Industrial Equipment">المعدات الصناعية</h3>
+          <p data-ar="معدات صناعية عالية الاعتمادية للشركات والمصانع." data-en="High reliability industrial equipment for companies and factories.">
+            معدات صناعية عالية الاعتمادية للشركات والمصانع.
+          </p>
+          <span class="more" data-ar="المزيد ←" data-en="Explore →">المزيد ←</span>
+        </a>
+
+        <a class="category-card" href="workshop.html">
+          <div class="icon">🛠️</div>
+          <h3 data-ar="تجهيزات الورش" data-en="Workshop Setup">تجهيزات الورش</h3>
+          <p data-ar="تجهيزات متكاملة للورش مع حلول عملية." data-en="Complete workshop setup with practical solutions.">
+            تجهيزات متكاملة للورش مع حلول عملية.
+          </p>
+          <span class="more" data-ar="المزيد ←" data-en="Explore →">المزيد ←</span>
+        </a>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn primary" href="contact.html" data-ar="اطلب تسعيرة / تواصل الآن" data-en="Request a Quote / Contact Now">اطلب تسعيرة / تواصل الآن</a>
+        <a class="btn" href="https://wa.me/218923167702" target="_blank" rel="noopener" data-ar="مراسلة واتساب" data-en="WhatsApp Message">مراسلة واتساب</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <div class="container footer-inner">
-    <div>
-      <strong>شركة المتميز الحديث</strong><br>
-      <small style="color:#64748b">AL MUTAMAYIZ AL HADIT</small>
-    </div>
-    <div class="footer-links">
-      <a href="index.html">الرئيسية</a>
-      <a href="contact.html">اتصل بنا</a>
-    </div>
-    <div class="footer-copy">© جميع الحقوق محفوظة - شركة المتميز الحديث</div>
-  </div>
-</footer>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="brand-mark sm">AM</div>
+        <div>
+          <div class="footer-title" data-ar="شركة المتميز الحديث" data-en="Al Mutamayiz Al Hadit">شركة المتميز الحديث</div>
+          <div class="footer-sub">AL MUTAMAYIZ AL HADIT</div>
+        </div>
+      </div>
 
-<a class="whatsapp" href="https://wa.me/218923167702" target="_blank">واتساب</a>
+      <div class="footer-links">
+        <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="contact.html" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
+        <a href="https://www.facebook.com/share/19Pcy5dsSK/?mibextid=wwXIfr" target="_blank" rel="noopener" data-ar="فيسبوك" data-en="Facebook">فيسبوك</a>
+      </div>
+
+      <div class="footer-copy" data-ar="© جميع الحقوق محفوظة - شركة المتميز الحديث" data-en="© All rights reserved - Al Mutamayiz Al Hadit">
+        © جميع الحقوق محفوظة - شركة المتميز الحديث
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
