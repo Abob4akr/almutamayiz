@@ -6,127 +6,89 @@
   <title>اتصل بنا | AL MUTAMAYIZ AL HADIT</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <a class="whatsapp-float" href="https://wa.me/218923167702" target="_blank" rel="noopener"><span>واتساب</span></a>
 
-  <header class="topbar">
-    <div class="container topbar-inner">
+  <a class="whatsapp" href="https://wa.me/218923167702" target="_blank" rel="noopener">واتساب</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
       <a class="brand" href="index.html">
-        <div class="brand-mark">AM</div>
+        <div class="brand-logo"><img src="images/logo.svg" alt="Logo"></div>
         <div class="brand-text">
-          <div class="brand-ar" data-ar="شركة المتميز الحديث" data-en="Al Mutamayiz Al Hadit">شركة المتميز الحديث</div>
-          <div class="brand-en">AL MUTAMAYIZ AL HADIT</div>
+          <h1>شركة المتميز الحديث</h1>
+          <p>AL MUTAMAYIZ AL HADIT</p>
         </div>
       </a>
 
-      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
-
-      <nav class="nav" id="mainNav">
-        <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-        <a href="electrical.html" data-ar="الكهربائية" data-en="Electrical">الكهربائية</a>
-        <a href="industrial.html" data-ar="الصناعية" data-en="Industrial">الصناعية</a>
-        <a href="workshop.html" data-ar="الورش" data-en="Workshop">الورش</a>
-        <a href="contact.html" class="active" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
-        <button class="lang-btn" type="button" id="langBtn">EN</button>
+      <nav class="nav">
+        <a href="index.html" data-i18n="home">الرئيسية</a>
+        <a href="electrical.html">المعدات الكهربائية</a>
+        <a href="industrial.html">المعدات الصناعية</a>
+        <a href="workshop.html">تجهيزات الورش</a>
+        <a href="contact.html" class="active" data-i18n="contact">اتصل بنا</a>
       </nav>
+
+      <div class="header-actions">
+        <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+        <button class="menu-btn" onclick="openMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <section class="page-hero">
-    <div class="container page-hero-inner">
-      <div>
-        <div class="kicker" data-ar="تواصل" data-en="Contact">تواصل</div>
-        <h1 data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</h1>
-        <p class="muted" data-ar="راسلنا الآن وسنرد عليك بأسرع وقت." data-en="Message us and we’ll reply as soon as possible.">
-          راسلنا الآن وسنرد عليك بأسرع وقت.
-        </p>
+  <div class="mobile-nav" id="mobileNav">
+    <div class="panel">
+      <div class="close">
+        <span>Menu</span>
+        <button class="lang-btn" onclick="closeMenu()">✕</button>
       </div>
+      <a href="index.html" data-i18n="home">الرئيسية</a>
+      <a href="electrical.html">المعدات الكهربائية</a>
+      <a href="industrial.html">المعدات الصناعية</a>
+      <a href="workshop.html">تجهيزات الورش</a>
+      <a href="contact.html" data-i18n="contact">اتصل بنا</a>
+    </div>
+  </div>
 
-      <div class="page-actions">
-        <a class="btn primary" href="https://wa.me/218923167702" target="_blank" rel="noopener" data-ar="مراسلة واتساب" data-en="WhatsApp Message">مراسلة واتساب</a>
-        <a class="btn" href="index.html" data-ar="رجوع للرئيسية" data-en="Back Home">رجوع للرئيسية</a>
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-box">
+        <div class="top">
+          <div>
+            <div class="pill">تواصل</div>
+            <h2 data-i18n="contact">اتصل بنا</h2>
+            <p>جاهزين لخدمتك — اطلب تسعيرة أو استفسار.</p>
+          </div>
+          <div class="icon">☎</div>
+        </div>
+
+        <div class="hero-actions" style="margin-top:12px;">
+          <a class="btn primary" href="index.html" data-i18n="backHome">رجوع للرئيسية</a>
+          <a class="btn ghost" href="https://wa.me/218923167702" target="_blank" rel="noopener">مراسلة واتساب</a>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="grid-2">
-        <div class="card">
-          <h2 class="h3" data-ar="بيانات التواصل" data-en="Contact Details">بيانات التواصل</h2>
-
-          <div class="contact-list">
-            <div class="contact-item">
-              <div class="label" data-ar="واتساب" data-en="WhatsApp">واتساب</div>
-              <a class="value" href="https://wa.me/218923167702" target="_blank" rel="noopener">0923167702</a>
-            </div>
-
-            <div class="contact-item">
-              <div class="label" data-ar="هاتف" data-en="Phone">هاتف</div>
-              <div class="value">
-                <a href="tel:+218910060041">0910060041</a> /
-                <a href="tel:+218918358715">0918358715</a> /
-                <a href="tel:+218910272876">0910272876</a>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <div class="label" data-ar="البريد" data-en="Email">البريد</div>
-              <a class="value" href="mailto:al_mutamayiz_tools@yahoo.com">al_mutamayiz_tools@yahoo.com</a>
-            </div>
-
-            <div class="contact-item">
-              <div class="label" data-ar="فيسبوك" data-en="Facebook">فيسبوك</div>
-              <a class="value" href="https://www.facebook.com/share/19Pcy5dsSK/?mibextid=wwXIfr" target="_blank" rel="noopener" data-ar="صفحة الشركة" data-en="Company Page">صفحة الشركة</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h2 class="h3" data-ar="نموذج سريع" data-en="Quick Form">نموذج سريع</h2>
-          <p class="muted" data-ar="هذا النموذج محلي للعرض، الأفضل التواصل عبر واتساب." data-en="This is a demo form—WhatsApp is recommended.">
-            هذا النموذج محلي للعرض، الأفضل التواصل عبر واتساب.
-          </p>
-
-          <form class="form" onsubmit="return false;">
-            <label class="field">
-              <span data-ar="الاسم" data-en="Name">الاسم</span>
-              <input type="text" placeholder="اكتب اسمك" data-ar-placeholder="اكتب اسمك" data-en-placeholder="Enter your name" />
-            </label>
-
-            <label class="field">
-              <span data-ar="رقم الهاتف" data-en="Phone">رقم الهاتف</span>
-              <input type="tel" placeholder="09xxxxxxxx" data-ar-placeholder="09xxxxxxxx" data-en-placeholder="Phone number" />
-            </label>
-
-            <label class="field">
-              <span data-ar="الرسالة" data-en="Message">الرسالة</span>
-              <textarea rows="4" placeholder="شن تبي؟" data-ar-placeholder="شن تبي؟" data-en-placeholder="What do you need?"></textarea>
-            </label>
-
-            <div class="form-actions">
-              <a class="btn primary" href="https://wa.me/218923167702" target="_blank" rel="noopener" data-ar="أرسل عبر واتساب" data-en="Send via WhatsApp">أرسل عبر واتساب</a>
-              <a class="btn" href="mailto:al_mutamayiz_tools@yahoo.com" data-ar="أرسل بريد" data-en="Send Email">أرسل بريد</a>
-            </div>
-          </form>
-        </div>
+      <div class="card">
+        <p><b>واتساب:</b> <a href="https://wa.me/218923167702" target="_blank" rel="noopener">0923167702</a></p>
+        <p><b>هاتف:</b> <a href="tel:+218910060041">0910060041</a> / <a href="tel:+218918358715">0918358715</a> / <a href="tel:+218910272876">0910272876</a></p>
+        <p><b>البريد:</b> <a href="mailto:al_mutamayiz_tools@yahoo.com">al_mutamayiz_tools@yahoo.com</a></p>
+        <p><b>فيسبوك:</b> <a href="https://www.facebook.com/share/19Pcy5dsSK/?mibextid=wwXIfr" target="_blank" rel="noopener">صفحة الشركة</a></p>
       </div>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div class="footer-brand">
-        <div class="brand-mark sm">AM</div>
-        <div>
-          <div class="footer-title" data-ar="شركة المتميز الحديث" data-en="Al Mutamayiz Al Hadit">شركة المتميز الحديث</div>
-          <div class="footer-sub">AL MUTAMAYIZ AL HADIT</div>
-        </div>
+      <div><b>شركة المتميز الحديث</b> — AL MUTAMAYIZ AL HADIT</div>
+      <div class="links">
+        <a href="index.html" data-i18n="home">الرئيسية</a>
       </div>
-      <div class="footer-copy" data-ar="© جميع الحقوق محفوظة - شركة المتميز الحديث" data-en="© All rights reserved - Al Mutamayiz Al Hadit">
-        © جميع الحقوق محفوظة - شركة المتميز الحديث
-      </div>
+      <div class="copy">© جميع الحقوق محفوظة</div>
     </div>
   </footer>
 
