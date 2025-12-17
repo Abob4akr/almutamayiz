@@ -1,93 +1,113 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>المعدات الصناعية | شركة المتميز الحديث</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المعدات الصناعية | AL MUTAMAYIZ AL HADIT</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <a class="whatsapp-float" href="https://wa.me/218923167702" target="_blank" rel="noopener"><span>واتساب</span></a>
 
-<header>
-  <div class="container header-inner">
-    <div class="brand">
-      <div class="brand-mark">AM</div>
-      <div class="brand-text">
-        <strong>شركة المتميز الحديث</strong>
-        <small>AL MUTAMAYIZ AL HADIT</small>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark">AM</div>
+        <div class="brand-text">
+          <div class="brand-ar" data-ar="شركة المتميز الحديث" data-en="Al Mutamayiz Al Hadit">شركة المتميز الحديث</div>
+          <div class="brand-en">AL MUTAMAYIZ AL HADIT</div>
+        </div>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+
+      <nav class="nav" id="mainNav">
+        <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="electrical.html" data-ar="الكهربائية" data-en="Electrical">الكهربائية</a>
+        <a href="industrial.html" class="active" data-ar="الصناعية" data-en="Industrial">الصناعية</a>
+        <a href="workshop.html" data-ar="الورش" data-en="Workshop">الورش</a>
+        <a href="contact.html" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
+        <button class="lang-btn" type="button" id="langBtn">EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <div>
+        <div class="kicker" data-ar="قسم" data-en="Category">قسم</div>
+        <h1 data-ar="المعدات الصناعية" data-en="Industrial Equipment">المعدات الصناعية</h1>
+        <p class="muted" data-ar="معدات واعتمادية للشركات والمصانع (عرض فقط — بدون أسعار)." data-en="Reliable equipment for companies & factories (display only — no pricing).">
+          معدات واعتمادية للشركات والمصانع (عرض فقط — بدون أسعار).
+        </p>
+        <div class="page-badges">
+          <span class="badge" data-ar="مصادر موثوقة" data-en="Trusted Sources">مصادر موثوقة</span>
+          <span class="badge" data-ar="تحمل عالي" data-en="High Durability">تحمل عالي</span>
+          <span class="badge" data-ar="دعم فني" data-en="Technical Support">دعم فني</span>
+        </div>
+      </div>
+
+      <div class="page-actions">
+        <a class="btn primary" href="contact.html" data-ar="اطلب تسعيرة" data-en="Request a Quote">اطلب تسعيرة</a>
+        <a class="btn" href="index.html" data-ar="رجوع للرئيسية" data-en="Back Home">رجوع للرئيسية</a>
       </div>
     </div>
+  </section>
 
-    <nav>
-      <a href="index.html">الرئيسية</a>
-      <a href="electrical.html">الكهربائية</a>
-      <a class="active" href="industrial.html">الصناعية</a>
-      <a href="workshop.html">الورش</a>
-      <a href="contact.html">اتصل بنا</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <h1>المعدات الصناعية 🏭</h1>
-      <p>معدات صناعية عالية الاعتمادية للشركات والمصانع (عرض فقط — التسعير حسب الطلب).</p>
-      <div class="badges">
-        <span class="badge">اعتمادية عالية</span>
-        <span class="badge">توريد للشركات</span>
-        <span class="badge">خدمة ودعم</span>
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-ar="أبرز المنتجات" data-en="Featured Items">أبرز المنتجات</h2>
+        <p data-ar="بدّل الصور والأسماء حسب المتوفر عندك." data-en="Replace images and names with your actual stock.">بدّل الصور والأسماء حسب المتوفر عندك.</p>
       </div>
-      <div class="btn-row">
-        <a class="btn primary" href="contact.html">اطلب تسعيرة</a>
-        <a class="btn" href="index.html">رجوع للرئيسية</a>
-      </div>
-    </div>
 
-    <div class="hero-card">
-      <h3>مجالات الصناعة</h3>
-      <p style="margin:0; opacity:.95; line-height:1.9">
-        تجهيزات مصانع – حلول هواء – معدات صيانة – ملحقات صناعية – أدوات قياس.
-      </p>
-      <div class="mini-stats">
-        <div class="stat"><div class="num">✓</div><div class="txt">توريد</div></div>
-        <div class="stat"><div class="num">⚙</div><div class="txt">صيانة</div></div>
-        <div class="stat"><div class="num">★</div><div class="txt">كفاءة</div></div>
-      </div>
-    </div>
-  </div>
-</section>
+      <div class="products">
+        <article class="product-card">
+          <img src="images/industrial-1.jpg" alt="Industrial 1" />
+          <div class="product-body">
+            <h3 data-ar="ضواغط / كمبروسر" data-en="Air Compressors">ضواغط / كمبروسر</h3>
+            <p data-ar="حلول ضغط هواء للصناعة والورش." data-en="Air pressure solutions for industry and workshops.">حلول ضغط هواء للصناعة والورش.</p>
+            <a class="product-cta" href="contact.html" data-ar="استفسار" data-en="Inquiry">استفسار</a>
+          </div>
+        </article>
 
-<section class="section">
-  <div class="container">
-    <div class="card">
-      <h2 style="margin-top:0">الأصناف المتوفرة (مثال)</h2>
-      <div class="grid">
-        <div class="item">كمبروسر هواء <small>ورش/مصانع</small></div>
-        <div class="item">خراطيم صناعية <small>ضغط/مقاومة</small></div>
-        <div class="item">معدات رفع <small>ونش/رافعات</small></div>
-        <div class="item">أدوات قياس <small>صناعية دقيقة</small></div>
-        <div class="item">مضخات <small>زيوت/سوائل</small></div>
-        <div class="item">ملحقات صناعية <small>تركيبات</small></div>
+        <article class="product-card">
+          <img src="images/industrial-2.jpg" alt="Industrial 2" />
+          <div class="product-body">
+            <h3 data-ar="معدات رفع / أوناش" data-en="Lifting Equipment">معدات رفع / أوناش</h3>
+            <p data-ar="تجهيزات رفع آمنة وعملية." data-en="Safe and practical lifting solutions.">تجهيزات رفع آمنة وعملية.</p>
+            <a class="product-cta" href="contact.html" data-ar="استفسار" data-en="Inquiry">استفسار</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/industrial-3.jpg" alt="Industrial 3" />
+          <div class="product-body">
+            <h3 data-ar="عدد قياس صناعية" data-en="Industrial Measuring Tools">عدد قياس صناعية</h3>
+            <p data-ar="أدوات قياس وتحكم للمصانع." data-en="Measuring and control tools for factories.">أدوات قياس وتحكم للمصانع.</p>
+            <a class="product-cta" href="contact.html" data-ar="استفسار" data-en="Inquiry">استفسار</a>
+          </div>
+        </article>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <div class="container footer-inner">
-    <div>
-      <strong>شركة المتميز الحديث</strong><br>
-      <small style="color:#64748b">AL MUTAMAYIZ AL HADIT</small>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="brand-mark sm">AM</div>
+        <div>
+          <div class="footer-title" data-ar="شركة المتميز الحديث" data-en="Al Mutamayiz Al Hadit">شركة المتميز الحديث</div>
+          <div class="footer-sub">AL MUTAMAYIZ AL HADIT</div>
+        </div>
+      </div>
+      <div class="footer-copy" data-ar="© جميع الحقوق محفوظة - شركة المتميز الحديث" data-en="© All rights reserved - Al Mutamayiz Al Hadit">
+        © جميع الحقوق محفوظة - شركة المتميز الحديث
+      </div>
     </div>
-    <div class="footer-links">
-      <a href="index.html">الرئيسية</a>
-      <a href="contact.html">اتصل بنا</a>
-    </div>
-    <div class="footer-copy">© جميع الحقوق محفوظة - شركة المتميز الحديث</div>
-  </div>
-</footer>
+  </footer>
 
-<a class="whatsapp" href="https://wa.me/218923167702" target="_blank">واتساب</a>
+  <script src="script.js"></script>
 </body>
 </html>
