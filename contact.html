@@ -7,7 +7,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
@@ -16,79 +16,149 @@
 <body>
   <a class="whatsapp-float" href="https://wa.me/218923167702" target="_blank" rel="noopener" data-ar="واتساب" data-en="WhatsApp">واتساب</a>
 
-  <header class="site-header">
+  <header class="site-header" id="top">
     <div class="container header-inner">
-      <div class="brand">
-        <div class="logo"><img src="images/logo.svg" alt="AM Logo" onerror="this.style.display='none'"></div>
-        <div class="brand-text">
-          <h1 data-ar="شركة المتميز الحديث" data-en="AL MUTAMAYIZ AL HADIT">شركة المتميز الحديث</h1>
-          <span class="en" data-ar="AL MUTAMAYIZ AL HADIT" data-en="AL MUTAMAYIZ AL HADIT">AL MUTAMAYIZ AL HADIT</span>
-        </div>
-      </div>
+      <button class="icon-btn menu-btn" type="button" aria-label="Menu" onclick="toggleMenu()">☰</button>
 
-      <nav class="nav">
+      <a class="brand" href="index.html">
+        <span class="logo-badge">AM</span>
+        <span class="brand-lines">
+          <span class="brand-ar" data-ar="شركة المتميز الحديث" data-en="AL MUTAMAYIZ AL HADIT">شركة المتميز الحديث</span>
+          <span class="brand-en">AL MUTAMAYIZ AL HADIT</span>
+        </span>
+      </a>
+
+      <button class="lang-btn" type="button" id="langBtn" onclick="toggleLang()">EN</button>
+
+      <nav class="nav desktop-nav">
         <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-        <a href="electrical.html" data-ar="المعدات الكهربائية" data-en="Electrical">المعدات الكهربائية</a>
-        <a href="industrial.html" data-ar="المعدات الميكانيكية" data-en="Mechanical">المعدات الميكانيكية</a>
-        <a href="workshop.html" data-ar="التزيت والتشحيم" data-en="Lubrication">التزيت والتشحيم</a>
-        <a class="active" href="contact.html" data-ar="اطلب تسعيرة" data-en="Request a Quote">اطلب تسعيرة</a>
+        <a href="electrical.html" data-ar="الكهربائية" data-en="Electrical">الكهربائية</a>
+        <a href="industrial.html" data-ar="الميكانيكية" data-en="Mechanical">الميكانيكية</a>
+        <a href="workshop.html" data-ar="التزيت" data-en="Lubrication">التزيت</a>
+        <a class="nav-cta active" href="contact.html" data-ar="اطلب تسعيرة" data-en="Request a Quote">اطلب تسعيرة</a>
       </nav>
-
-      <div class="header-actions">
-        <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
-      </div>
     </div>
 
-    <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-nav" id="mobileNav">
       <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-      <a href="electrical.html" data-ar="المعدات الكهربائية" data-en="Electrical">المعدات الكهربائية</a>
-      <a href="industrial.html" data-ar="المعدات الميكانيكية" data-en="Mechanical">المعدات الميكانيكية</a>
-      <a href="workshop.html" data-ar="التزيت والتشحيم" data-en="Lubrication">التزيت والتشحيم</a>
+      <a href="electrical.html" data-ar="الكهربائية" data-en="Electrical">الكهربائية</a>
+      <a href="industrial.html" data-ar="الميكانيكية" data-en="Mechanical">الميكانيكية</a>
+      <a href="workshop.html" data-ar="التزيت" data-en="Lubrication">التزيت</a>
       <a href="contact.html" data-ar="اطلب تسعيرة" data-en="Request a Quote">اطلب تسعيرة</a>
-    </div>
+    </nav>
   </header>
 
   <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-card">
+          <h1 data-ar="اطلب تسعيرة / استفسار" data-en="Request a Quote / Inquiry">اطلب تسعيرة / استفسار</h1>
+          <p data-ar="عبّي البيانات، وبعدين نفتح لك واتساب برسالة جاهزة."
+             data-en="Fill the form, then WhatsApp opens with a ready message.">
+            عبّي البيانات، وبعدين نفتح لك واتساب برسالة جاهزة.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container">
-        <div class="section-title">
-          <div>
-            <h2 data-ar="طلب تسعيرة / استفسار" data-en="Request a Quote / Inquiry">طلب تسعيرة / استفسار</h2>
-            <p data-ar="عبي البيانات وبيوصل طلبك مباشرة على واتساب." data-en="Fill in details and it will be sent to WhatsApp.">
-              عبي البيانات وبيوصل طلبك مباشرة على واتساب.
-            </p>
-          </div>
+
+        <div class="form-card">
+          <form id="quoteForm" class="form">
+
+            <div class="field">
+              <label data-ar="الاسم" data-en="Name">الاسم</label>
+              <input type="text" id="name" required
+                     data-ph-ar="اكتب اسمك"
+                     data-ph-en="Write your name"
+                     placeholder="اكتب اسمك">
+            </div>
+
+            <div class="field">
+              <label data-ar="رقم الهاتف" data-en="Phone">رقم الهاتف</label>
+              <input type="tel" id="phone" required
+                     data-ph-ar="مثال: 09xxxxxxxx"
+                     data-ph-en="Example: 09xxxxxxxx"
+                     placeholder="مثال: 09xxxxxxxx">
+            </div>
+
+            <div class="field">
+              <label data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</label>
+              <input type="email" id="email"
+                     data-ph-ar="اختياري"
+                     data-ph-en="Optional"
+                     placeholder="اختياري">
+            </div>
+
+            <div class="field">
+              <label data-ar="القسم" data-en="Section">القسم</label>
+              <select id="section" required>
+                <option value="" data-ar="اختر القسم" data-en="Choose section">اختر القسم</option>
+                <option value="المعدات الكهربائية" data-ar="المعدات الكهربائية" data-en="Electrical Equipment">المعدات الكهربائية</option>
+                <option value="المعدات الميكانيكية" data-ar="المعدات الميكانيكية" data-en="Mechanical Equipment">المعدات الميكانيكية</option>
+                <option value="التزيت والتشحيم" data-ar="التزيت والتشحيم" data-en="Lubrication & Greasing">التزيت والتشحيم</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label data-ar="وصف الطلب / المنتج" data-en="Request / Product details">وصف الطلب / المنتج</label>
+              <textarea id="note" rows="5" required
+                        data-ph-ar="اكتب: اسم المنتج، المواصفات، الكمية، أي ملاحظات..."
+                        data-ph-en="Write: product name, specs, quantity, any notes..."
+                        placeholder="اكتب: اسم المنتج، المواصفات، الكمية، أي ملاحظات..."></textarea>
+            </div>
+
+            <button class="btn primary full" type="submit" data-ar="إرسال عبر واتساب" data-en="Send via WhatsApp">
+              إرسال عبر واتساب
+            </button>
+
+            <div class="hint">
+              <span data-ar="أرقام الاتصال: 0910060041 / 0918358715 / 0910272876"
+                    data-en="Call numbers: 0910060041 / 0918358715 / 0910272876">
+                أرقام الاتصال: 0910060041 / 0918358715 / 0910272876
+              </span>
+            </div>
+
+          </form>
         </div>
 
-        <form class="form" onsubmit="sendQuoteToWhatsApp(event)">
-          <div class="row">
-            <input class="input" id="name" required placeholder="الاسم" />
-            <input class="input" id="phone" required placeholder="رقم الهاتف" />
-          </div>
-
-          <div class="row" style="margin-top:10px">
-            <input class="input" id="email" type="email" required placeholder="البريد الإلكتروني" />
-            <input class="input" value="شركة المتميز الحديث" readonly />
-          </div>
-
-          <div style="margin-top:10px">
-            <textarea id="note" required placeholder="اكتب الطلب: اسم المنتج / النوع / المقاس / أي تفاصيل..."></textarea>
-          </div>
-
-          <button class="submit" type="submit" data-ar="إرسال الطلب عبر واتساب" data-en="Send via WhatsApp">إرسال الطلب عبر واتساب</button>
-        </form>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <small data-ar="© جميع الحقوق محفوظة — شركة المتميز الحديث" data-en="© All rights reserved — AL MUTAMAYIZ AL HADIT">© جميع الحقوق محفوظة — شركة المتميز الحديث</small>
-      <small><a href="index.html" data-ar="رجوع للرئيسية" data-en="Back to Home">رجوع للرئيسية</a></small>
+  <footer class="simple-footer">
+    <div class="container footer-bar">
+      <span data-ar="© شركة المتميز الحديث" data-en="© AL MUTAMAYIZ AL HADIT">© شركة المتميز الحديث</span>
+      <a class="to-top" href="#top" data-ar="⬆ للأعلى" data-en="⬆ Top">⬆ للأعلى</a>
     </div>
   </footer>
 
-  <script>setLang("ar");</script>
+  <script>
+    setLangFromStorageOrDefault();
+
+    const form = document.getElementById('quoteForm');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = (document.getElementById('name').value || '').trim();
+      const phone = (document.getElementById('phone').value || '').trim();
+      const email = (document.getElementById('email').value || '').trim();
+      const section = (document.getElementById('section').value || '').trim();
+      const note = (document.getElementById('note').value || '').trim();
+
+      const msg =
+        `طلب تسعيرة / استفسار%n` +
+        `الاسم: ${name}%n` +
+        `الهاتف: ${phone}%n` +
+        `الإيميل: ${email || '-'}%n` +
+        `القسم: ${section}%n` +
+        `التفاصيل: ${note}%n`;
+
+      const encoded = encodeURIComponent(msg.replaceAll('%n', '\n'));
+      const url = `https://wa.me/218923167702?text=${encoded}`;
+      window.open(url, '_blank', 'noopener');
+    });
+  </script>
 </body>
 </html>
