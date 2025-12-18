@@ -1,286 +1,307 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>شركة المتميز الحديث | AL MUTAMAYIZ AL HADIT</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 
 <body>
 
-<a class="whatsapp-float" href="https://wa.me/218923167702" target="_blank">واتساب</a>
+  <!-- 🟩 واتساب عائم -->
+  <a class="whatsapp-float" href="https://wa.me/218923167702" target="_blank" rel="noopener" data-ar="واتساب" data-en="WhatsApp">واتساب</a>
 
-<header class="site-header">
-  <div class="container header-inner">
+  <!-- 🟦 الهيدر -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
 
-    <div class="brand">
-      <div class="logo">
-        <img src="images/logo.png" alt="Logo" onerror="this.style.display='none'">
-      </div>
-      <div class="brand-text">
-        <h1>شركة المتميز الحديث</h1>
-        <span class="en">AL MUTAMAYIZ AL HADIT</span>
-      </div>
+      <button class="icon-btn menu-btn" type="button" aria-label="Menu" onclick="toggleMenu()">☰</button>
+
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="logo-badge">AM</span>
+        <span class="brand-lines">
+          <span class="brand-ar" data-ar="شركة المتميز الحديث" data-en="AL MUTAMAYIZ AL HADIT">شركة المتميز الحديث</span>
+          <span class="brand-en">AL MUTAMAYIZ AL HADIT</span>
+        </span>
+      </a>
+
+      <button class="lang-btn" type="button" id="langBtn" onclick="toggleLang()">EN</button>
+
+      <nav class="nav desktop-nav">
+        <a href="index.html" class="active" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="#about" data-ar="من نحن" data-en="About">من نحن</a>
+        <a href="#sections" data-ar="الأقسام" data-en="Sections">الأقسام</a>
+        <a href="#how" data-ar="كيف نطلب؟" data-en="How it works">كيف نطلب؟</a>
+        <a href="#contact" data-ar="التواصل" data-en="Contact">التواصل</a>
+        <a class="nav-cta" href="contact.html" data-ar="اطلب تسعيرة" data-en="Request a Quote">اطلب تسعيرة</a>
+      </nav>
     </div>
 
-    <nav class="nav">
-      <a class="active" href="index.html">الرئيسية</a>
-      <a href="#about">من نحن</a>
-      <a href="#vision">رؤيتنا</a>
-      <a href="#services">شن نوفروا</a>
-      <a href="#why">ليش تختارنا</a>
-      <a href="#categories">الأقسام</a>
-      <a href="#steps">طريقة الطلب</a>
-      <a href="#contact">التواصل</a>
-      <a href="contact.html">اطلب تسعيرة</a>
+    <!-- 🟨 منيو موبايل -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+      <a href="#about" data-ar="من نحن" data-en="About">من نحن</a>
+      <a href="#sections" data-ar="الأقسام" data-en="Sections">الأقسام</a>
+      <a href="#how" data-ar="كيف نطلب؟" data-en="How it works">كيف نطلب؟</a>
+      <a href="#contact" data-ar="التواصل" data-en="Contact">التواصل</a>
+      <a href="contact.html" data-ar="اطلب تسعيرة" data-en="Request a Quote">اطلب تسعيرة</a>
     </nav>
+  </header>
 
-    <div class="header-actions">
-      <button class="lang-btn" onclick="toggleLang()">EN</button>
-      <button class="menu-btn" onclick="toggleMenu()">☰</button>
-    </div>
+  <main>
 
-  </div>
+    <!-- 🟪 الهيرو -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-card">
+          <div class="hero-chip" data-ar="⭐ خبرة +30 سنة في معدات الورش والمصانع" data-en="⭐ 30+ years experience in workshop & factory equipment">
+            ⭐ خبرة +30 سنة في معدات الورش والمصانع
+          </div>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">الرئيسية</a>
-    <a href="#about">من نحن</a>
-    <a href="#vision">رؤيتنا</a>
-    <a href="#services">شن نوفروا</a>
-    <a href="#why">ليش تختارنا</a>
-    <a href="#categories">الأقسام</a>
-    <a href="#steps">طريقة الطلب</a>
-    <a href="#contact">التواصل</a>
-    <a href="contact.html">اطلب تسعيرة</a>
-  </div>
-</header>
+          <h1 class="hero-title"
+              data-ar="حلول احترافية لمعدات وتجهيزات الورش والمصانع"
+              data-en="Professional solutions for workshops & factories">
+            حلول احترافية لمعدات وتجهيزات الورش والمصانع
+          </h1>
 
-<section class="hero">
-  <div class="container hero-wrap">
+          <p class="hero-sub"
+             data-ar="استيراد وتوريد معدات موثوقة للورش والمصانع داخل ليبيا — عرض فقط بدون أسعار. اطلب تسعيرة حسب الطلب."
+             data-en="Importing & supplying reliable equipment in Libya — display only, no prices. Request a quote anytime.">
+            استيراد وتوريد معدات موثوقة للورش والمصانع داخل ليبيا — عرض فقط بدون أسعار. اطلب تسعيرة حسب الطلب.
+          </p>
 
-    <div class="hero-card">
-      <h2 class="hero-title">حلول احترافية لمعدات الورش والمصانع</h2>
-      <p class="hero-sub">
-        استيراد وتوريد معدات موثوقة تخدم الورش والمصانع داخل ليبيا
-        بجودة عالية وخبرة تتجاوز 30 عامًا.
-      </p>
+          <div class="hero-badges">
+            <span class="badge" data-ar="جودة واعتمادية" data-en="Quality & reliability">جودة واعتمادية</span>
+            <span class="badge" data-ar="توريد للورش والمصانع" data-en="Workshops & factories">توريد للورش والمصانع</span>
+            <span class="badge" data-ar="دعم وخدمة" data-en="Support & service">دعم وخدمة</span>
+          </div>
 
-      <div class="badges">
-        <span class="badge">أكثر من 30 سنة خبرة</span>
-        <span class="badge">جودة واعتمادية</span>
-        <span class="badge">دعم وخدمة</span>
+          <div class="hero-actions">
+            <a class="btn primary" href="#sections" data-ar="استعرض الأقسام" data-en="Browse sections">استعرض الأقسام</a>
+            <a class="btn" href="contact.html" data-ar="اطلب تسعيرة" data-en="Request a quote">اطلب تسعيرة</a>
+          </div>
+        </div>
+
+        <aside class="hero-side">
+          <div class="side-card">
+            <h3 data-ar="نبذة سريعة" data-en="Quick overview">نبذة سريعة</h3>
+            <p data-ar="نوفر معدات كهربائية وميكانيكية وتجهيزات تزيت وتشحيم لتلبية احتياج الورش والمصانع."
+               data-en="We supply electrical & mechanical equipment and lubrication solutions for workshops and factories.">
+              نوفر معدات كهربائية وميكانيكية وتجهيزات تزيت وتشحيم لتلبية احتياج الورش والمصانع.
+            </p>
+            <div class="mini-list">
+              <div class="mini-row"><span class="dot"></span><span data-ar="عرض فقط بدون أسعار" data-en="Display only — no prices">عرض فقط بدون أسعار</span></div>
+              <div class="mini-row"><span class="dot"></span><span data-ar="اطلب تسعيرة حسب الكمية والمواصفات" data-en="Quote based on specs & quantity">اطلب تسعيرة حسب الكمية والمواصفات</span></div>
+              <div class="mini-row"><span class="dot"></span><span data-ar="تواصل مباشر عبر واتساب" data-en="Direct WhatsApp contact">تواصل مباشر عبر واتساب</span></div>
+            </div>
+          </div>
+        </aside>
       </div>
+    </section>
 
-      <div class="hero-actions">
-        <a class="btn primary" href="contact.html">اطلب تسعيرة</a>
-        <a class="btn" href="#categories">استعرض الأقسام</a>
-      </div>
-    </div>
-
-    <aside class="side-box">
-      <h3>نبذة سريعة</h3>
-      <p>
-        شركة ليبية متخصصة في توريد معدات الورش والمصانع
-        والمعدات الكهربائية والميكانيكية وحلول التزيت والتشحيم.
-      </p>
-    </aside>
-
-  </div>
-</section>
-
-<section class="section" id="about">
-  <div class="container">
-    <div class="section-title">
-      <div>
-        <h2>من نحن</h2>
-        <p>خبرة • ثقة • جودة</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="body">
-        <p>
-          شركة المتميز الحديث هي شركة ليبية رائدة في مجال استيراد
-          وتوريد معدات وتجهيزات الورش والمصانع، والعدد اليدوية
-          والكهربائية، ومعدات التزيت والتشحيم.
-        </p>
-        <p>
-          نمتلك خبرة تمتد لأكثر من 30 عامًا في هذا المجال،
-          مما جعلنا من الأسماء الموثوقة في السوق الليبي،
-          ونسعى دائمًا لتقديم حلول عملية ترفع كفاءة
-          الورش والمصانع.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="vision">
-  <div class="container">
-    <div class="section-title">
-      <div>
-        <h2>رؤيتنا ورسالتنا</h2>
-        <p>نشتغلوا برؤية واضحة</p>
-      </div>
-    </div>
-
-    <div class="grid">
-      <div class="card">
-        <div class="body">
-          <h3>رؤيتنا</h3>
-          <p>
-            أن نكون من الشركات الرائدة في ليبيا في مجال
-            توريد معدات الورش والمصانع، وأن نكون الخيار
-            الأول لعملائنا من حيث الجودة والاعتمادية.
+    <!-- 🟩 من نحن -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-ar="من نحن" data-en="About Us">من نحن</h2>
+          <p data-ar="شركة ليبية متخصصة في توريد معدات الورش والمصانع بخبرة تتجاوز 30 سنة."
+             data-en="A Libyan supplier of workshop & factory equipment with 30+ years of experience.">
+            شركة ليبية متخصصة في توريد معدات الورش والمصانع بخبرة تتجاوز 30 سنة.
           </p>
         </div>
-      </div>
 
-      <div class="card">
-        <div class="body">
-          <h3>رسالتنا</h3>
-          <p>
-            توفير معدات وحلول عملية تساعد على رفع
-            كفاءة الورش والمصانع، مع الالتزام بخدمة
-            محترمة ودعم مستمر.
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-ico">🏢</div>
+            <h3 data-ar="خبرة وثقة" data-en="Experience & Trust">خبرة وثقة</h3>
+            <p data-ar="نشتغلوا على الجودة والاعتمادية وبناء علاقات طويلة الأمد مع العملاء."
+               data-en="We focus on quality, reliability, and long-term client relationships.">
+              نشتغلوا على الجودة والاعتمادية وبناء علاقات طويلة الأمد مع العملاء.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-ico">📦</div>
+            <h3 data-ar="توريد عملي" data-en="Practical Supply">توريد عملي</h3>
+            <p data-ar="تشكيلة واسعة تلبي احتياج الورش والمصانع والشركات والفنيين."
+               data-en="Wide selection that fits workshops, factories, companies, and technicians.">
+              تشكيلة واسعة تلبي احتياج الورش والمصانع والشركات والفنيين.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-ico">🛠️</div>
+            <h3 data-ar="خدمة ودعم" data-en="Service & Support">خدمة ودعم</h3>
+            <p data-ar="نساعدك في اختيار الأنسب حسب الاستخدام والمواصفات المطلوبة."
+               data-en="We help you choose the right option based on usage and specs.">
+              نساعدك في اختيار الأنسب حسب الاستخدام والمواصفات المطلوبة.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🟦 الأقسام (قائمة زي الصورة) -->
+    <section class="section" id="sections">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-ar="الأقسام الرئيسية" data-en="Main Sections">الأقسام الرئيسية</h2>
+          <p data-ar="اضغط على القسم للدخول — عرض فقط بدون أسعار" data-en="Tap a section to enter — display only, no prices">
+            اضغط على القسم للدخول — عرض فقط بدون أسعار
           </p>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="section" id="services">
-  <div class="container">
-    <div class="section-title">
-      <div>
-        <h2>شن نوفروا؟</h2>
-        <p>حلول متكاملة</p>
-      </div>
-    </div>
+        <div class="list-cards">
 
-    <div class="grid">
-      <div class="card"><div class="body">معدات كهربائية احترافية</div></div>
-      <div class="card"><div class="body">معدات ميكانيكية وصناعية</div></div>
-      <div class="card"><div class="body">حلول تزيت وتشحيم</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="why">
-  <div class="container">
-    <div class="section-title">
-      <div>
-        <h2>ليش تختار شركة المتميز الحديث؟</h2>
-        <p>أسباب تخليك تطمّن</p>
-      </div>
-    </div>
-
-    <div class="grid">
-      <div class="card"><div class="body">✔ خبرة أكثر من 30 سنة</div></div>
-      <div class="card"><div class="body">✔ موردين وعلامات موثوقة</div></div>
-      <div class="card"><div class="body">✔ حلول تناسب احتياجك</div></div>
-      <div class="card"><div class="body">✔ دعم وخدمة بعد التوريد</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="categories">
-  <div class="container">
-    <div class="section-title">
-      <div>
-        <h2>الأقسام الرئيسية</h2>
-        <p>اضغط للدخول</p>
-      </div>
-    </div>
-
-    <div class="grid">
-      <div class="card">
-        <div class="body">
-          <h3>المعدات الكهربائية</h3>
-          <a class="btn2 primary" href="electrical.html">دخول القسم</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="body">
-          <h3>المعدات الميكانيكية</h3>
-          <a class="btn2 primary" href="industrial.html">دخول القسم</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="body">
-          <h3>التزيت والتشحيم</h3>
-          <a class="btn2 primary" href="workshop.html">دخول القسم</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="steps">
-  <div class="container">
-    <div class="section-title">
-      <div>
-        <h2>كيف تطلب تسعيرة؟</h2>
-        <p>3 خطوات بسيطة</p>
-      </div>
-    </div>
-
-    <div class="grid">
-      <div class="card"><div class="body">1️⃣ اختر القسم المناسب</div></div>
-      <div class="card"><div class="body">2️⃣ اكتب تفاصيل طلبك</div></div>
-      <div class="card"><div class="body">3️⃣ نرد عليك مباشرة</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="contact">
-  <div class="container">
-    <div class="section-title">
-      <div>
-        <h2>بيانات التواصل</h2>
-        <p>تواصل معنا في أي وقت</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="body">
-        <p><strong>واتساب:</strong> 0923167702</p>
-        <p><strong>هاتف:</strong> 0910060041 – 0918358715 – 0910272876</p>
-        <p><strong>البريد:</strong> al_mutamayiz_tools@yahoo.com</p>
-        <p>
-          <strong>فيسبوك:</strong>
-          <a href="https://www.facebook.com/share/19Pcy5dsSK/?mibextid=wwXIfr" target="_blank">
-            صفحة الشركة
+          <a class="list-card" href="electrical.html">
+            <div class="lc-icon">⚡</div>
+            <div class="lc-body">
+              <div class="lc-title" data-ar="المعدات الكهربائية" data-en="Electrical Equipment">المعدات الكهربائية</div>
+              <div class="lc-sub"
+                   data-ar="ترابنو • معدات لحام • جلخ • ماكينات غسيل • شواحن وبطاريات • ملحقات كهربائية"
+                   data-en="Electric drill • Welding equipment • Grinding • Washing machines • Chargers & batteries • Accessories">
+                ترابنو • معدات لحام • جلخ • ماكينات غسيل • شواحن وبطاريات • ملحقات كهربائية
+              </div>
+            </div>
+            <div class="lc-go" data-ar="دخول" data-en="Enter">دخول</div>
           </a>
-        </p>
-        <p>
-          <strong>العنوان:</strong>
-          مصراتة – بالقرب من جزيرة التقنية الطبية
-        </p>
+
+          <a class="list-card" href="industrial.html">
+            <div class="lc-icon">🔧</div>
+            <div class="lc-body">
+              <div class="lc-title" data-ar="🔧 المعدات الميكانيكية" data-en="🔧 Mechanical Equipment">🔧 المعدات الميكانيكية</div>
+              <div class="lc-sub"
+                   data-ar="مفكات الهواء • مفاتيح • أطقم لقم • كمبروسر هواء • خراطيم هواء • ملصقات بجميع أنواعها"
+                   data-en="Air screwdrivers • Wrenches (Keys) • Socket sets • Air compressor • Air hoses • Stickers of all kinds">
+                مفكات الهواء • مفاتيح • أطقم لقم • كمبروسر هواء • خراطيم هواء • ملصقات بجميع أنواعها
+              </div>
+            </div>
+            <div class="lc-go" data-ar="دخول" data-en="Enter">دخول</div>
+          </a>
+
+          <a class="list-card" href="workshop.html">
+            <div class="lc-icon">🛢️</div>
+            <div class="lc-body">
+              <div class="lc-title" data-ar="التزيت والتشحيم" data-en="Lubrication & Greasing">التزيت والتشحيم</div>
+              <div class="lc-sub"
+                   data-ar="مضخات شحم • مسدسات شحم • خراطيم شحم • بكرات خراطيم • عدادات قياس • ملحقات التشحيم • بخاخات صيانة"
+                   data-en="Grease pumps • Grease guns • Grease hoses • Hose reels • Flow meters • Accessories • Maintenance sprays">
+                مضخات شحم • مسدسات شحم • خراطيم شحم • بكرات خراطيم • عدادات قياس • ملحقات التشحيم • بخاخات صيانة
+              </div>
+            </div>
+            <div class="lc-go" data-ar="دخول" data-en="Enter">دخول</div>
+          </a>
+
+        </div>
+
+        <div class="cta-wide">
+          <div class="cta-text">
+            <h3 data-ar="جاهز تسأل على منتج؟" data-en="Ready to ask about a product?">جاهز تسأل على منتج؟</h3>
+            <p data-ar="ادخل صفحة الطلب وابعث لنا تفاصيل الطلب وسنرد عليك مباشرة."
+               data-en="Open the request page and send your details — we’ll reply quickly.">
+              ادخل صفحة الطلب وابعث لنا تفاصيل الطلب وسنرد عليك مباشرة.
+            </p>
+          </div>
+          <a class="btn primary" href="contact.html" data-ar="اطلب تسعيرة" data-en="Request a Quote">اطلب تسعيرة</a>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<footer class="footer">
-  <div class="container footer-inner">
-    <small>© جميع الحقوق محفوظة — شركة المتميز الحديث</small>
-  </div>
-</footer>
+    <!-- 🟪 كيف نطلب -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-ar="كيف نطلب تسعيرة؟" data-en="How to request a quote?">كيف نطلب تسعيرة؟</h2>
+          <p data-ar="3 خطوات بسيطة" data-en="3 simple steps">3 خطوات بسيطة</p>
+        </div>
 
-<script>
-  setLang("ar");
-</script>
+        <div class="steps">
+          <div class="step">
+            <div class="step-no">1</div>
+            <div class="step-text" data-ar="اختار القسم المناسب" data-en="Choose the right section">اختار القسم المناسب</div>
+          </div>
+          <div class="step">
+            <div class="step-no">2</div>
+            <div class="step-text" data-ar="حدد المنتج والمواصفات والكمية" data-en="Specify product, specs, and quantity">حدد المنتج والمواصفات والكمية</div>
+          </div>
+          <div class="step">
+            <div class="step-no">3</div>
+            <div class="step-text" data-ar="عبّي بياناتك في صفحة الطلب" data-en="Fill your info in the request page">عبّي بياناتك في صفحة الطلب</div>
+          </div>
+        </div>
+
+        <div class="btn-row center">
+          <a class="btn primary" href="contact.html" data-ar="ابدأ الطلب" data-en="Start request">ابدأ الطلب</a>
+          <a class="btn" href="https://wa.me/218923167702" target="_blank" rel="noopener" data-ar="واتساب مباشر" data-en="WhatsApp direct">واتساب مباشر</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🟧 التواصل (آخر الصفحة) -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-ar="بيانات التواصل" data-en="Contact Details">بيانات التواصل</h2>
+          <p data-ar="مصراتة — بالقرب من جزيرة التقنية الطبية" data-en="Misrata — near Medical Technology Island">
+            مصراتة — بالقرب من جزيرة التقنية الطبية
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <a class="contact-card" href="https://wa.me/218923167702" target="_blank" rel="noopener">
+            <div class="cc-ico">💬</div>
+            <div class="cc-body">
+              <div class="cc-title" data-ar="واتساب" data-en="WhatsApp">واتساب</div>
+              <div class="cc-sub">0923167702</div>
+            </div>
+          </a>
+
+          <a class="contact-card" href="tel:+218910060041">
+            <div class="cc-ico">📞</div>
+            <div class="cc-body">
+              <div class="cc-title" data-ar="هاتف" data-en="Phone">هاتف</div>
+              <div class="cc-sub">0910060041 / 0918358715 / 0910272876</div>
+            </div>
+          </a>
+
+          <a class="contact-card" href="mailto:al_mutamayiz_tools@yahoo.com">
+            <div class="cc-ico">📧</div>
+            <div class="cc-body">
+              <div class="cc-title" data-ar="البريد" data-en="Email">البريد</div>
+              <div class="cc-sub">al_mutamayiz_tools@yahoo.com</div>
+            </div>
+          </a>
+
+          <a class="contact-card" href="https://www.facebook.com/share/19Pcy5dsSK/?mibextid=wwXIfr" target="_blank" rel="noopener">
+            <div class="cc-ico">🌐</div>
+            <div class="cc-body">
+              <div class="cc-title" data-ar="فيسبوك" data-en="Facebook">فيسبوك</div>
+              <div class="cc-sub" data-ar="صفحة الشركة" data-en="Company page">صفحة الشركة</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="footer-bar">
+          <span data-ar="© جميع الحقوق محفوظة — شركة المتميز الحديث" data-en="© All rights reserved — AL MUTAMAYIZ AL HADIT">
+            © جميع الحقوق محفوظة — شركة المتميز الحديث
+          </span>
+          <a class="to-top" href="#top" data-ar="⬆ رجوع للأعلى" data-en="⬆ Back to top">⬆ رجوع للأعلى</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    setLangFromStorageOrDefault();
+  </script>
 
 </body>
 </html>
