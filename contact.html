@@ -1,99 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>اتصل بنا | AL MUTAMAYIZ AL HADIT</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>اطلب تسعيرة | شركة المتميز الحديث</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800;900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 
 <body>
-  <a class="whatsapp-float" href="https://wa.me/218923167702" target="_blank" rel="noopener">واتساب</a>
+  <a class="whatsapp-float" href="https://wa.me/218923167702" target="_blank" rel="noopener" data-ar="واتساب" data-en="WhatsApp">واتساب</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+      <div class="brand">
+        <div class="logo"><img src="images/logo.svg" alt="AM Logo" onerror="this.style.display='none'"></div>
+        <div class="brand-text">
+          <h1 data-ar="شركة المتميز الحديث" data-en="AL MUTAMAYIZ AL HADIT">شركة المتميز الحديث</h1>
+          <span class="en" data-ar="AL MUTAMAYIZ AL HADIT" data-en="AL MUTAMAYIZ AL HADIT">AL MUTAMAYIZ AL HADIT</span>
+        </div>
+      </div>
 
-      <a class="brand" href="index.html">
-        <span class="logo-icon">AM</span>
-        <span class="brand-text">
-          <strong class="t" data-ar="شركة المتميز الحديث" data-en="AL MUTAMAYIZ AL HADIT">شركة المتميز الحديث</strong>
-          <small class="t" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</small>
-        </span>
-      </a>
+      <nav class="nav">
+        <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="electrical.html" data-ar="المعدات الكهربائية" data-en="Electrical">المعدات الكهربائية</a>
+        <a href="industrial.html" data-ar="المعدات الميكانيكية" data-en="Mechanical">المعدات الميكانيكية</a>
+        <a href="workshop.html" data-ar="التزيت والتشحيم" data-en="Lubrication">التزيت والتشحيم</a>
+        <a class="active" href="contact.html" data-ar="اطلب تسعيرة" data-en="Request a Quote">اطلب تسعيرة</a>
+      </nav>
 
       <div class="header-actions">
-        <button class="lang-btn" id="langBtn" type="button">EN</button>
+        <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
       </div>
     </div>
 
-    <nav class="mobile-nav" id="mobileNav">
-      <a class="t" data-ar="الرئيسية" data-en="Home" href="index.html">الرئيسية</a>
-      <a href="electrical.html" class="t" data-ar="المعدات الكهربائية" data-en="Electrical">المعدات الكهربائية</a>
-      <a href="mechanical.html" class="t" data-ar="المعدات الميكانيكية" data-en="Mechanical">المعدات الميكانيكية</a>
-      <a href="lubrication.html" class="t" data-ar="التزييت والتشحيم" data-en="Lubrication">التزييت والتشحيم</a>
-    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+      <a href="electrical.html" data-ar="المعدات الكهربائية" data-en="Electrical">المعدات الكهربائية</a>
+      <a href="industrial.html" data-ar="المعدات الميكانيكية" data-en="Mechanical">المعدات الميكانيكية</a>
+      <a href="workshop.html" data-ar="التزيت والتشحيم" data-en="Lubrication">التزيت والتشحيم</a>
+      <a href="contact.html" data-ar="اطلب تسعيرة" data-en="Request a Quote">اطلب تسعيرة</a>
+    </div>
   </header>
 
-  <main class="section">
-    <div class="container">
-      <div class="section-card">
-        <div class="section-badge t" data-ar="تواصل" data-en="Contact">تواصل</div>
-        <h1 class="page-title t" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</h1>
-        <p class="page-sub t"
-           data-ar="اطلب تسعيرة أو استفسار — رد سريع عبر واتساب."
-           data-en="Request a quote or ask a question — fast reply on WhatsApp.">
-          اطلب تسعيرة أو استفسار — رد سريع عبر واتساب.
-        </p>
-
-        <div class="contact-grid">
-          <div class="contact-box">
-            <h3 class="t" data-ar="واتساب" data-en="WhatsApp">واتساب</h3>
-            <a class="contact-link" href="https://wa.me/218923167702" target="_blank" rel="noopener">0923167702</a>
-          </div>
-
-          <div class="contact-box">
-            <h3 class="t" data-ar="هواتف" data-en="Phones">هواتف</h3>
-            <div class="phones">
-              <a class="contact-link" href="tel:+218910060041">0910060041</a>
-              <a class="contact-link" href="tel:+218918358715">0918358715</a>
-              <a class="contact-link" href="tel:+218910272876">0910272876</a>
-            </div>
-          </div>
-
-          <div class="contact-box">
-            <h3 class="t" data-ar="البريد" data-en="Email">البريد</h3>
-            <a class="contact-link" href="mailto:al_mutamayiz_tools@yahoo.com">al_mutamayiz_tools@yahoo.com</a>
-          </div>
-
-          <div class="contact-box">
-            <h3 class="t" data-ar="فيسبوك" data-en="Facebook">فيسبوك</h3>
-            <a class="contact-link" href="https://www.facebook.com/share/19Pcy5dsSK/?mibextid=wwXIfr" target="_blank" rel="noopener">
-              <span class="t" data-ar="صفحة الشركة" data-en="Company Page">صفحة الشركة</span>
-            </a>
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2 data-ar="طلب تسعيرة / استفسار" data-en="Request a Quote / Inquiry">طلب تسعيرة / استفسار</h2>
+            <p data-ar="عبي البيانات وبيوصل طلبك مباشرة على واتساب." data-en="Fill in details and it will be sent to WhatsApp.">
+              عبي البيانات وبيوصل طلبك مباشرة على واتساب.
+            </p>
           </div>
         </div>
 
-        <div class="page-actions">
-          <a class="btn ghost t" data-ar="رجوع للرئيسية" data-en="Back Home" href="index.html">رجوع للرئيسية</a>
-          <a class="btn primary t" data-ar="مراسلة واتساب الآن" data-en="WhatsApp Now" href="https://wa.me/218923167702" target="_blank" rel="noopener">مراسلة واتساب الآن</a>
-        </div>
+        <form class="form" onsubmit="sendQuoteToWhatsApp(event)">
+          <div class="row">
+            <input class="input" id="name" required placeholder="الاسم" />
+            <input class="input" id="phone" required placeholder="رقم الهاتف" />
+          </div>
+
+          <div class="row" style="margin-top:10px">
+            <input class="input" id="email" type="email" required placeholder="البريد الإلكتروني" />
+            <input class="input" value="شركة المتميز الحديث" readonly />
+          </div>
+
+          <div style="margin-top:10px">
+            <textarea id="note" required placeholder="اكتب الطلب: اسم المنتج / النوع / المقاس / أي تفاصيل..."></textarea>
+          </div>
+
+          <button class="submit" type="submit" data-ar="إرسال الطلب عبر واتساب" data-en="Send via WhatsApp">إرسال الطلب عبر واتساب</button>
+        </form>
       </div>
-    </div>
+    </section>
   </main>
 
   <footer class="footer">
-    <div class="container foot-inner">
-      <div class="foot-brand">
-        <strong class="t" data-ar="شركة المتميز الحديث" data-en="AL MUTAMAYIZ AL HADIT">شركة المتميز الحديث</strong>
-        <small>AL MUTAMAYIZ AL HADIT</small>
-      </div>
-      <div class="foot-copy t" data-ar="© جميع الحقوق محفوظة - شركة المتميز الحديث" data-en="© All Rights Reserved - AL MUTAMAYIZ AL HADIT">
-        © جميع الحقوق محفوظة - شركة المتميز الحديث
-      </div>
+    <div class="container footer-inner">
+      <small data-ar="© جميع الحقوق محفوظة — شركة المتميز الحديث" data-en="© All rights reserved — AL MUTAMAYIZ AL HADIT">© جميع الحقوق محفوظة — شركة المتميز الحديث</small>
+      <small><a href="index.html" data-ar="رجوع للرئيسية" data-en="Back to Home">رجوع للرئيسية</a></small>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>setLang("ar");</script>
 </body>
 </html>
