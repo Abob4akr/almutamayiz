@@ -1,185 +1,221 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>شركة المتميز الحديث | AL MUTAMAYIZ AL HADIT</title>
 
-  <!-- Google Font -->
+  <!-- خط -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JS -->
   <script defer src="script.js"></script>
 </head>
 
 <body>
 
-  <a class="whatsapp-float" href="https://wa.me/218923167702" target="_blank" rel="noopener" data-ar="واتساب" data-en="WhatsApp">واتساب</a>
+<!-- زر واتساب -->
+<a class="whatsapp-float" href="https://wa.me/218923167702" target="_blank">
+  واتساب
+</a>
 
-  <header class="site-header">
-    <div class="container header-inner">
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-inner">
 
-      <div class="brand">
-        <div class="logo">
-          <!-- لو عندك logo.svg خليه، ولو عندك png بدلها -->
-          <img src="images/logo.svg" alt="AM Logo" onerror="this.style.display='none'">
+    <!-- الشعار -->
+    <div class="brand">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo" onerror="this.style.display='none'">
+      </div>
+      <div class="brand-text">
+        <h1>شركة المتميز الحديث</h1>
+        <span class="en">AL MUTAMAYIZ AL HADIT</span>
+      </div>
+    </div>
+
+    <!-- المنيو -->
+    <nav class="nav">
+      <a class="active" href="index.html">الرئيسية</a>
+      <a href="#about">من نحن</a>
+      <a href="electrical.html">المعدات الكهربائية</a>
+      <a href="industrial.html">المعدات الميكانيكية</a>
+      <a href="workshop.html">التزيت والتشحيم</a>
+      <a href="contact.html">اطلب تسعيرة</a>
+    </nav>
+
+    <!-- أزرار -->
+    <div class="header-actions">
+      <button class="lang-btn" onclick="toggleLang()">EN</button>
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </div>
+
+  </div>
+
+  <!-- منيو الموبايل -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">الرئيسية</a>
+    <a href="#about">من نحن</a>
+    <a href="electrical.html">المعدات الكهربائية</a>
+    <a href="industrial.html">المعدات الميكانيكية</a>
+    <a href="workshop.html">التزيت والتشحيم</a>
+    <a href="contact.html">اطلب تسعيرة</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="container hero-wrap">
+
+    <div class="hero-card">
+      <h2 class="hero-title">
+        حلول احترافية لمعدات الورش والمصانع
+      </h2>
+
+      <p class="hero-sub">
+        استيراد وتوريد معدات عالية الجودة للورش والمصانع داخل ليبيا
+      </p>
+
+      <div class="badges">
+        <span class="badge">خبرة أكثر من 30 سنة</span>
+        <span class="badge">جودة واعتمادية</span>
+        <span class="badge">خدمة ودعم</span>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn primary" href="contact.html">اطلب تسعيرة</a>
+        <a class="btn" href="#categories">استعرض الأقسام</a>
+      </div>
+    </div>
+
+    <aside class="side-box">
+      <h3>بيانات التواصل</h3>
+      <p>تواصل معنا مباشرة</p>
+
+      <div class="quick">
+        <div class="q-item"><span>واتساب:</span> 0923167702</div>
+        <div class="q-item"><span>هاتف:</span> 0910060041 / 0918358715</div>
+        <div class="q-item"><span>البريد:</span> al_mutamayiz_tools@yahoo.com</div>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section" id="about">
+  <div class="container">
+
+    <div class="section-title">
+      <div>
+        <h2>من نحن</h2>
+        <p>خبرة • ثقة • جودة</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="body">
+
+        <h3>شركة المتميز الحديث</h3>
+
+        <p>
+          شركة المتميز الحديث هي شركة ليبية متخصصة في استيراد وتوريد معدات
+          وتجهيزات الورش والمصانع، والعدد اليدوية والكهربائية، وحلول التزيت
+          والتشحيم. نمتلك خبرة تمتد لأكثر من 30 عامًا جعلتنا من الأسماء
+          الموثوقة في السوق الليبي.
+        </p>
+
+        <p>
+          نعمل على توفير منتجات عالية الجودة من مصادر وعلامات تجارية معتمدة،
+          مع الالتزام بتقديم حلول عملية تساعد على رفع كفاءة الورش والمصانع،
+          وبناء علاقات طويلة الأمد قائمة على الثقة والاحترافية.
+        </p>
+
+        <div class="badges" style="margin-top:14px">
+          <span class="badge">+30 سنة خبرة</span>
+          <span class="badge">توريد للورش والمصانع</span>
+          <span class="badge">دعم فني وخدمة</span>
         </div>
 
-        <div class="brand-text">
-          <h1 data-ar="شركة المتميز الحديث" data-en="AL MUTAMAYIZ AL HADIT">شركة المتميز الحديث</h1>
-          <span class="en" data-ar="AL MUTAMAYIZ AL HADIT" data-en="AL MUTAMAYIZ AL HADIT">AL MUTAMAYIZ AL HADIT</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CATEGORIES ================= -->
+<section class="section" id="categories">
+  <div class="container">
+
+    <div class="section-title">
+      <div>
+        <h2>الأقسام الرئيسية</h2>
+        <p>اضغط على القسم للدخول</p>
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="thumb">
+          <img src="images/electrical.jpg" alt="">
+        </div>
+        <div class="body">
+          <h3>المعدات الكهربائية</h3>
+          <p>معدات وأدوات كهربائية احترافية</p>
+          <div class="actions">
+            <a class="btn2 primary" href="electrical.html">دخول القسم</a>
+          </div>
         </div>
       </div>
 
-      <nav class="nav">
-        <a class="active" href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-        <a href="electrical.html" data-ar="المعدات الكهربائية" data-en="Electrical Equipment">المعدات الكهربائية</a>
-        <a href="industrial.html" data-ar="المعدات الميكانيكية" data-en="Mechanical Equipment">المعدات الميكانيكية</a>
-        <a href="workshop.html" data-ar="التزيت والتشحيم" data-en="Lubrication & Greasing">التزيت والتشحيم</a>
-        <a href="contact.html" data-ar="اطلب تسعيرة" data-en="Request a Quote">اطلب تسعيرة</a>
-      </nav>
+      <div class="card">
+        <div class="thumb">
+          <img src="images/mechanical.jpg" alt="">
+        </div>
+        <div class="body">
+          <h3>المعدات الميكانيكية</h3>
+          <p>معدات صناعية وميكانيكية قوية</p>
+          <div class="actions">
+            <a class="btn2 primary" href="industrial.html">دخول القسم</a>
+          </div>
+        </div>
+      </div>
 
-      <div class="header-actions">
-        <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+      <div class="card">
+        <div class="thumb">
+          <img src="images/lubrication.jpg" alt="">
+        </div>
+        <div class="body">
+          <h3>التزيت والتشحيم</h3>
+          <p>مضخات شحم وأنظمة تزيت</p>
+          <div class="actions">
+            <a class="btn2 primary" href="workshop.html">دخول القسم</a>
+          </div>
+        </div>
       </div>
 
     </div>
 
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-      <a href="electrical.html" data-ar="المعدات الكهربائية" data-en="Electrical Equipment">المعدات الكهربائية</a>
-      <a href="industrial.html" data-ar="المعدات الميكانيكية" data-en="Mechanical Equipment">المعدات الميكانيكية</a>
-      <a href="workshop.html" data-ar="التزيت والتشحيم" data-en="Lubrication & Greasing">التزيت والتشحيم</a>
-      <a href="contact.html" data-ar="اطلب تسعيرة" data-en="Request a Quote">اطلب تسعيرة</a>
-    </div>
-  </header>
+  </div>
+</section>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-wrap">
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <small>© جميع الحقوق محفوظة — شركة المتميز الحديث</small>
+    <small><a href="index.html">الرئيسية</a></small>
+  </div>
+</footer>
 
-        <div class="hero-card">
-          <h2 class="hero-title" data-ar="حلول احترافية لمعدات الورش والمصانع" data-en="Professional Solutions for Workshops & Factories">
-            حلول احترافية لمعدات الورش والمصانع
-          </h2>
+<script>
+  setLang("ar");
+</script>
 
-          <p class="hero-sub" data-ar="استيراد وتوريد معدات عالية الاعتمادية مع دعم وخدمة ممتازة داخل ليبيا."
-             data-en="Import & supply reliable equipment with excellent support across Libya.">
-            استيراد وتوريد معدات عالية الاعتمادية مع دعم وخدمة ممتازة داخل ليبيا.
-          </p>
-
-          <div class="badges">
-            <div class="badge" data-ar="خبرة +30 سنة" data-en="30+ Years Experience">خبرة +30 سنة</div>
-            <div class="badge" data-ar="جودة واعتمادية" data-en="Quality & Reliability">جودة واعتمادية</div>
-            <div class="badge" data-ar="خدمة سريعة" data-en="Fast Service">خدمة سريعة</div>
-          </div>
-
-          <div class="hero-actions">
-            <a class="btn primary" href="contact.html" data-ar="اطلب تسعيرة" data-en="Request a Quote">اطلب تسعيرة</a>
-            <a class="btn" href="electrical.html" data-ar="استعرض الأقسام" data-en="Browse Categories">استعرض الأقسام</a>
-          </div>
-        </div>
-
-        <aside class="side-box">
-          <h3 data-ar="بيانات التواصل" data-en="Quick Contact">بيانات التواصل</h3>
-          <p data-ar="تواصل معنا مباشرة — وسنرد عليك بأسرع وقت." data-en="Contact us directly — we’ll reply quickly.">
-            تواصل معنا مباشرة — وسنرد عليك بأسرع وقت.
-          </p>
-
-          <div class="quick">
-            <div class="q-item"><span data-ar="واتساب:" data-en="WhatsApp:">واتساب:</span> 0923167702</div>
-            <div class="q-item"><span data-ar="هاتف:" data-en="Phone:">هاتف:</span> 0910060041 / 0918358715 / 0910272876</div>
-            <div class="q-item"><span data-ar="البريد:" data-en="Email:">البريد:</span> al_mutamayiz_tools@yahoo.com</div>
-            <a class="q-item" href="https://www.facebook.com/share/19Pcy5dsSK/?mibextid=wwXIfr" target="_blank" rel="noopener">
-              <span data-ar="فيسبوك:" data-en="Facebook:">فيسبوك:</span>
-              <span data-ar="صفحة الشركة" data-en="Company Page">صفحة الشركة</span>
-            </a>
-          </div>
-        </aside>
-
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-title">
-          <div>
-            <h2 data-ar="الأقسام الرئيسية" data-en="Main Categories">الأقسام الرئيسية</h2>
-            <p data-ar="اختر القسم المناسب واستعرض المنتجات." data-en="Choose a category to view products.">اختر القسم المناسب واستعرض المنتجات.</p>
-          </div>
-        </div>
-
-        <div class="grid">
-
-          <div class="card">
-            <div class="thumb">
-              <!-- بدّل الصورة باسم صورة من images عندك -->
-              <img src="images/IMG_9439.jpg" alt="Electrical" onerror="this.style.display='none'">
-            </div>
-            <div class="body">
-              <h3 data-ar="المعدات الكهربائية" data-en="Electrical Equipment">المعدات الكهربائية</h3>
-              <p data-ar="أدوات ومعدات كهربائية احترافية للورش والصناعة." data-en="Professional electrical tools & equipment.">
-                أدوات ومعدات كهربائية احترافية للورش والصناعة.
-              </p>
-              <div class="actions">
-                <a class="btn2 primary" href="electrical.html" data-ar="فتح القسم" data-en="Open">فتح القسم</a>
-                <a class="btn2" href="contact.html" data-ar="اطلب تسعيرة" data-en="Request Quote">اطلب تسعيرة</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="thumb">
-              <img src="images/IMG_9440.jpg" alt="Mechanical" onerror="this.style.display='none'">
-            </div>
-            <div class="body">
-              <h3 data-ar="المعدات الميكانيكية" data-en="Mechanical Equipment">المعدات الميكانيكية</h3>
-              <p data-ar="معدات قوية وموثوقة للأعمال الثقيلة والمصانع." data-en="Reliable equipment for heavy-duty work.">
-                معدات قوية وموثوقة للأعمال الثقيلة والمصانع.
-              </p>
-              <div class="actions">
-                <a class="btn2 primary" href="industrial.html" data-ar="فتح القسم" data-en="Open">فتح القسم</a>
-                <a class="btn2" href="contact.html" data-ar="اطلب تسعيرة" data-en="Request Quote">اطلب تسعيرة</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="thumb">
-              <img src="images/IMG_9441.jpg" alt="Lubrication" onerror="this.style.display='none'">
-            </div>
-            <div class="body">
-              <h3 data-ar="التزيت والتشحيم" data-en="Lubrication & Greasing">التزيت والتشحيم</h3>
-              <p data-ar="حلول تزيت وتشحيم ومضخات شحم للورش والمصانع." data-en="Lubrication systems and grease pumps.">
-                حلول تزيت وتشحيم ومضخات شحم للورش والمصانع.
-              </p>
-              <div class="actions">
-                <a class="btn2 primary" href="workshop.html" data-ar="فتح القسم" data-en="Open">فتح القسم</a>
-                <a class="btn2" href="contact.html" data-ar="اطلب تسعيرة" data-en="Request Quote">اطلب تسعيرة</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <small data-ar="© جميع الحقوق محفوظة — شركة المتميز الحديث" data-en="© All rights reserved — AL MUTAMAYIZ AL HADIT">
-        © جميع الحقوق محفوظة — شركة المتميز الحديث
-      </small>
-      <small>abob4akr.github.io</small>
-    </div>
-  </footer>
-
-  <script>
-    // default arabic
-    setLang("ar");
-  </script>
 </body>
 </html>
