@@ -1,135 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>تجهيزات الورش | AL MUTAMAYIZ AL HADIT</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>التزيت والتشحيم | شركة المتميز الحديث</title>
 
-  <a class="whatsapp" href="https://wa.me/218923167702" target="_blank" rel="noopener">واتساب</a>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <a class="whatsapp-float" href="https://wa.me/218923167702" target="_blank" rel="noopener" data-ar="واتساب" data-en="WhatsApp">واتساب</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <div class="brand-logo"><img src="images/logo.svg" alt="Logo"></div>
+      <div class="brand">
+        <div class="logo"><img src="images/logo.svg" alt="AM Logo" onerror="this.style.display='none'"></div>
         <div class="brand-text">
-          <h1>شركة المتميز الحديث</h1>
-          <p>AL MUTAMAYIZ AL HADIT</p>
+          <h1 data-ar="شركة المتميز الحديث" data-en="AL MUTAMAYIZ AL HADIT">شركة المتميز الحديث</h1>
+          <span class="en" data-ar="AL MUTAMAYIZ AL HADIT" data-en="AL MUTAMAYIZ AL HADIT">AL MUTAMAYIZ AL HADIT</span>
         </div>
-      </a>
+      </div>
 
       <nav class="nav">
-        <a href="index.html" data-i18n="home">الرئيسية</a>
-        <a href="electrical.html">المعدات الكهربائية</a>
-        <a href="industrial.html">المعدات الصناعية</a>
-        <a href="workshop.html" class="active">تجهيزات الورش</a>
-        <a href="contact.html" data-i18n="contact">اتصل بنا</a>
+        <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="electrical.html" data-ar="المعدات الكهربائية" data-en="Electrical">المعدات الكهربائية</a>
+        <a href="industrial.html" data-ar="المعدات الميكانيكية" data-en="Mechanical">المعدات الميكانيكية</a>
+        <a class="active" href="workshop.html" data-ar="التزيت والتشحيم" data-en="Lubrication">التزيت والتشحيم</a>
+        <a href="contact.html" data-ar="اطلب تسعيرة" data-en="Request a Quote">اطلب تسعيرة</a>
       </nav>
 
       <div class="header-actions">
         <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
-        <button class="menu-btn" onclick="openMenu()" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
       </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+      <a href="electrical.html" data-ar="المعدات الكهربائية" data-en="Electrical">المعدات الكهربائية</a>
+      <a href="industrial.html" data-ar="المعدات الميكانيكية" data-en="Mechanical">المعدات الميكانيكية</a>
+      <a href="workshop.html" data-ar="التزيت والتشحيم" data-en="Lubrication">التزيت والتشحيم</a>
+      <a href="contact.html" data-ar="اطلب تسعيرة" data-en="Request a Quote">اطلب تسعيرة</a>
     </div>
   </header>
 
-  <div class="mobile-nav" id="mobileNav">
-    <div class="panel">
-      <div class="close">
-        <span>Menu</span>
-        <button class="lang-btn" onclick="closeMenu()">✕</button>
-      </div>
-      <a href="index.html" data-i18n="home">الرئيسية</a>
-      <a href="electrical.html">المعدات الكهربائية</a>
-      <a href="industrial.html">المعدات الصناعية</a>
-      <a href="workshop.html">تجهيزات الورش</a>
-      <a href="contact.html" data-i18n="contact">اتصل بنا</a>
-    </div>
-  </div>
-
-  <section class="page-hero">
-    <div class="container">
-      <div class="page-box">
-        <div class="top">
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
           <div>
-            <div class="pill">قسم</div>
-            <h2>تجهيزات الورش</h2>
-            <p>حلول عملية وتجهيزات متكاملة للورش.</p>
+            <h2 data-ar="التزيت والتشحيم" data-en="Lubrication & Greasing">التزيت والتشحيم</h2>
+            <p data-ar="حلول تزيت وتشحيم ومضخات شحم للورش والمصانع." data-en="Lubrication systems and grease pumps.">حلول تزيت وتشحيم ومضخات شحم للورش والمصانع.</p>
           </div>
-          <div class="icon">🛠️</div>
         </div>
 
-        <div class="hero-actions" style="margin-top:12px;">
-          <a class="btn primary" href="index.html" data-i18n="backHome">رجوع للرئيسية</a>
-          <a class="btn ghost" href="contact.html" data-i18n="price">اطلب تسعيرة</a>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="grid">
 
-  <section class="section">
-    <div class="container">
-      <div class="section-title">
-        <h2 data-i18n="featured">أبرز المنتجات</h2>
-        <p data-i18n="note">بدّل الأسماء والصور حسب المتوفر عندك.</p>
-      </div>
-
-      <div class="products">
-        <div class="product">
-          <div class="img"><img src="images/IMG_9446.jpg" alt="Work tables"></div>
-          <div class="body">
-            <h4>طاولات وتجهيز</h4>
-            <p>تنظيم وراحة أعلى للورشة.</p>
-            <div class="actions">
-              <a class="small-btn" href="index.html" data-i18n="backHome">رجوع</a>
-              <a class="small-btn primary" href="contact.html" data-i18n="price">تسعيرة</a>
+          <div class="card">
+            <div class="thumb"><img src="images/IMG_9451.jpg" alt="Grease Pump" onerror="this.style.display='none'"></div>
+            <div class="body">
+              <h3 data-ar="مضخات شحم" data-en="Grease Pumps">مضخات شحم</h3>
+              <p data-ar="مضخات يدوية وهوائية حسب الطلب." data-en="Manual & pneumatic pumps as needed.">مضخات يدوية وهوائية حسب الطلب.</p>
+              <div class="actions"><a class="btn2 primary" href="contact.html" data-ar="اطلب تسعيرة" data-en="Request Quote">اطلب تسعيرة</a></div>
             </div>
           </div>
-        </div>
 
-        <div class="product">
-          <div class="img"><img src="images/IMG_9447.jpg" alt="Welding"></div>
-          <div class="body">
-            <h4>معدات لحام</h4>
-            <p>حلول لحام للورش والمشاريع.</p>
-            <div class="actions">
-              <a class="small-btn" href="index.html" data-i18n="backHome">رجوع</a>
-              <a class="small-btn primary" href="contact.html" data-i18n="price">تسعيرة</a>
+          <div class="card">
+            <div class="thumb"><img src="images/IMG_9452.jpg" alt="Lubrication System" onerror="this.style.display='none'"></div>
+            <div class="body">
+              <h3 data-ar="أنظمة تزيت" data-en="Lubrication Systems">أنظمة تزيت</h3>
+              <p data-ar="حلول صناعية لرفع الكفاءة وتقليل الأعطال." data-en="Industrial solutions to increase efficiency.">حلول صناعية لرفع الكفاءة وتقليل الأعطال.</p>
+              <div class="actions"><a class="btn2 primary" href="contact.html" data-ar="اطلب تسعيرة" data-en="Request Quote">اطلب تسعيرة</a></div>
             </div>
           </div>
-        </div>
 
-        <div class="product">
-          <div class="img"><img src="images/IMG_9451.jpg" alt="Safety"></div>
-          <div class="body">
-            <h4>مستلزمات سلامة</h4>
-            <p>معدات حماية واشتراطات السلامة المهنية.</p>
-            <div class="actions">
-              <a class="small-btn" href="index.html" data-i18n="backHome">رجوع</a>
-              <a class="small-btn primary" href="contact.html" data-i18n="price">تسعيرة</a>
+          <div class="card">
+            <div class="thumb"><img src="images/IMG_9453.jpg" alt="Accessories" onerror="this.style.display='none'"></div>
+            <div class="body">
+              <h3 data-ar="ملحقات وتشحيم" data-en="Accessories">ملحقات وتشحيم</h3>
+              <p data-ar="خراطيم، وصلات، مسدسات شحم..." data-en="Hoses, fittings, grease guns...">خراطيم، وصلات، مسدسات شحم...</p>
+              <div class="actions"><a class="btn2 primary" href="contact.html" data-ar="اطلب تسعيرة" data-en="Request Quote">اطلب تسعيرة</a></div>
             </div>
           </div>
+
         </div>
       </div>
-
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div><b>شركة المتميز الحديث</b> — AL MUTAMAYIZ AL HADIT</div>
-      <div class="links">
-        <a href="index.html" data-i18n="home">الرئيسية</a>
-        <a href="contact.html" data-i18n="contact">اتصل بنا</a>
-      </div>
-      <div class="copy">© جميع الحقوق محفوظة</div>
+      <small data-ar="© جميع الحقوق محفوظة — شركة المتميز الحديث" data-en="© All rights reserved — AL MUTAMAYIZ AL HADIT">© جميع الحقوق محفوظة — شركة المتميز الحديث</small>
+      <small><a href="index.html" data-ar="رجوع للرئيسية" data-en="Back to Home">رجوع للرئيسية</a></small>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>setLang("ar");</script>
 </body>
 </html>
