@@ -7,7 +7,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
@@ -16,102 +16,120 @@
 <body>
   <a class="whatsapp-float" href="https://wa.me/218923167702" target="_blank" rel="noopener" data-ar="واتساب" data-en="WhatsApp">واتساب</a>
 
-  <header class="site-header">
+  <header class="site-header" id="top">
     <div class="container header-inner">
-      <div class="brand">
-        <div class="logo"><img src="images/logo.svg" alt="AM Logo" onerror="this.style.display='none'"></div>
-        <div class="brand-text">
-          <h1 data-ar="شركة المتميز الحديث" data-en="AL MUTAMAYIZ AL HADIT">شركة المتميز الحديث</h1>
-          <span class="en" data-ar="AL MUTAMAYIZ AL HADIT" data-en="AL MUTAMAYIZ AL HADIT">AL MUTAMAYIZ AL HADIT</span>
-        </div>
-      </div>
+      <button class="icon-btn menu-btn" type="button" aria-label="Menu" onclick="toggleMenu()">☰</button>
 
-      <nav class="nav">
+      <a class="brand" href="index.html">
+        <span class="logo-badge">AM</span>
+        <span class="brand-lines">
+          <span class="brand-ar" data-ar="شركة المتميز الحديث" data-en="AL MUTAMAYIZ AL HADIT">شركة المتميز الحديث</span>
+          <span class="brand-en">AL MUTAMAYIZ AL HADIT</span>
+        </span>
+      </a>
+
+      <button class="lang-btn" type="button" id="langBtn" onclick="toggleLang()">EN</button>
+
+      <nav class="nav desktop-nav">
         <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-        <a class="active" href="electrical.html" data-ar="المعدات الكهربائية" data-en="Electrical">المعدات الكهربائية</a>
+        <a href="electrical.html" class="active" data-ar="المعدات الكهربائية" data-en="Electrical">المعدات الكهربائية</a>
         <a href="industrial.html" data-ar="المعدات الميكانيكية" data-en="Mechanical">المعدات الميكانيكية</a>
         <a href="workshop.html" data-ar="التزيت والتشحيم" data-en="Lubrication">التزيت والتشحيم</a>
-        <a href="contact.html" data-ar="اطلب تسعيرة" data-en="Request a Quote">اطلب تسعيرة</a>
+        <a class="nav-cta" href="contact.html" data-ar="اطلب تسعيرة" data-en="Request a Quote">اطلب تسعيرة</a>
       </nav>
-
-      <div class="header-actions">
-        <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
-      </div>
     </div>
 
-    <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-nav" id="mobileNav">
       <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
       <a href="electrical.html" data-ar="المعدات الكهربائية" data-en="Electrical">المعدات الكهربائية</a>
       <a href="industrial.html" data-ar="المعدات الميكانيكية" data-en="Mechanical">المعدات الميكانيكية</a>
       <a href="workshop.html" data-ar="التزيت والتشحيم" data-en="Lubrication">التزيت والتشحيم</a>
       <a href="contact.html" data-ar="اطلب تسعيرة" data-en="Request a Quote">اطلب تسعيرة</a>
-    </div>
+    </nav>
   </header>
 
   <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-card">
+          <h1 data-ar="⚡ المعدات الكهربائية" data-en="⚡ Electrical Equipment">⚡ المعدات الكهربائية</h1>
+          <p data-ar="عرض فقط بدون أسعار — اطلب تسعيرة حسب المواصفات والكمية."
+             data-en="Display only, no prices — request a quote based on specs & quantity.">
+            عرض فقط بدون أسعار — اطلب تسعيرة حسب المواصفات والكمية.
+          </p>
+          <div class="btn-row">
+            <a class="btn primary" href="contact.html" data-ar="اطلب تسعيرة" data-en="Request a Quote">اطلب تسعيرة</a>
+            <a class="btn" href="index.html#sections" data-ar="رجوع للأقسام" data-en="Back to sections">رجوع للأقسام</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container">
-        <div class="section-title">
-          <div>
-            <h2 data-ar="المعدات الكهربائية" data-en="Electrical Equipment">المعدات الكهربائية</h2>
-            <p data-ar="منتجات احترافية للورش والصناعة." data-en="Professional products for workshops & industry.">منتجات احترافية للورش والصناعة.</p>
+
+        <div class="grid-2">
+          <div class="product-card">
+            <div class="p-ico">🔩</div>
+            <div class="p-title" data-ar="ترابنو / Electric Drill" data-en="Electric Drill">ترابنو / Electric Drill</div>
+            <div class="p-sub" data-ar="أنواع متعددة حسب الاستخدام" data-en="Multiple types for different uses">أنواع متعددة حسب الاستخدام</div>
+          </div>
+
+          <div class="product-card">
+            <div class="p-ico">🧑‍🏭</div>
+            <div class="p-title" data-ar="معدات لحام / Welding Equipment" data-en="Welding Equipment">معدات لحام / Welding Equipment</div>
+            <div class="p-sub" data-ar="حلول لحام للورش والصناعة" data-en="Welding solutions for workshops & industry">حلول لحام للورش والصناعة</div>
+          </div>
+
+          <div class="product-card">
+            <div class="p-ico">⚙️</div>
+            <div class="p-title" data-ar="جلخ / Grinding Machine" data-en="Grinding Machine">جلخ / Grinding Machine</div>
+            <div class="p-sub" data-ar="جلخ زاوية و/أو ثابت حسب الحاجة" data-en="Angle & bench options as needed">جلخ زاوية و/أو ثابت حسب الحاجة</div>
+          </div>
+
+          <div class="product-card">
+            <div class="p-ico">🧺</div>
+            <div class="p-title" data-ar="ماكينات الغسيل / Washing Machine" data-en="Washing Machine">ماكينات الغسيل / Washing Machine</div>
+            <div class="p-sub" data-ar="خيارات متنوعة للاستخدام" data-en="Various options for different use cases">خيارات متنوعة للاستخدام</div>
+          </div>
+
+          <div class="product-card">
+            <div class="p-ico">🔋</div>
+            <div class="p-title" data-ar="شواحن وبطاريات / Chargers & Batteries" data-en="Chargers & Batteries">شواحن وبطاريات / Chargers & Batteries</div>
+            <div class="p-sub" data-ar="لأنظمة الشحن والعدد" data-en="For tools and power systems">لأنظمة الشحن والعدد</div>
+          </div>
+
+          <div class="product-card">
+            <div class="p-ico">🔌</div>
+            <div class="p-title" data-ar="ملحقات كهربائية / Electrical Accessories" data-en="Electrical Accessories">ملحقات كهربائية / Electrical Accessories</div>
+            <div class="p-sub" data-ar="كابلات، وصلات، واحتياجات متنوعة" data-en="Cables, extensions, and more">كابلات، وصلات، واحتياجات متنوعة</div>
           </div>
         </div>
 
-        <div class="grid">
-
-          <div class="card">
-            <div class="thumb">
-              <img src="images/IMG_9442.jpg" alt="Compressors" onerror="this.style.display='none'">
-            </div>
-            <div class="body">
-              <h3 data-ar="كمبروسر" data-en="Compressor">كمبروسر</h3>
-              <p data-ar="تشغيل مستقر للاستخدام الصناعي." data-en="Stable operation for industrial use.">تشغيل مستقر للاستخدام الصناعي.</p>
-              <div class="actions">
-                <a class="btn2 primary" href="contact.html" data-ar="اطلب تسعيرة" data-en="Request Quote">اطلب تسعيرة</a>
-              </div>
-            </div>
+        <div class="cta-wide">
+          <div class="cta-text">
+            <h3 data-ar="تبي تسأل على نوع/مواصفات؟" data-en="Need a specific type/spec?">تبي تسأل على نوع/مواصفات؟</h3>
+            <p data-ar="امشي لصفحة الطلب وكتب تفاصيل المنتج والكمية."
+               data-en="Go to the request page and write product details and quantity.">
+              امشي لصفحة الطلب وكتب تفاصيل المنتج والكمية.
+            </p>
           </div>
-
-          <div class="card">
-            <div class="thumb">
-              <img src="images/IMG_9443.jpg" alt="Generators" onerror="this.style.display='none'">
-            </div>
-            <div class="body">
-              <h3 data-ar="مولدات" data-en="Generators">مولدات</h3>
-              <p data-ar="أداء قوي للأعمال والمصانع." data-en="Strong performance for factories & sites.">أداء قوي للأعمال والمصانع.</p>
-              <div class="actions">
-                <a class="btn2 primary" href="contact.html" data-ar="اطلب تسعيرة" data-en="Request Quote">اطلب تسعيرة</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="thumb">
-              <img src="images/IMG_9444.jpg" alt="Power Tools" onerror="this.style.display='none'">
-            </div>
-            <div class="body">
-              <h3 data-ar="معدات كهربائية" data-en="Power Tools">معدات كهربائية</h3>
-              <p data-ar="عدة كهربائية احترافية للورش." data-en="Professional power tools for workshops.">عدة كهربائية احترافية للورش.</p>
-              <div class="actions">
-                <a class="btn2 primary" href="contact.html" data-ar="اطلب تسعيرة" data-en="Request Quote">اطلب تسعيرة</a>
-              </div>
-            </div>
-          </div>
-
+          <a class="btn primary" href="contact.html" data-ar="اطلب تسعيرة" data-en="Request a Quote">اطلب تسعيرة</a>
         </div>
+
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <small data-ar="© جميع الحقوق محفوظة — شركة المتميز الحديث" data-en="© All rights reserved — AL MUTAMAYIZ AL HADIT">© جميع الحقوق محفوظة — شركة المتميز الحديث</small>
-      <small><a href="index.html" data-ar="رجوع للرئيسية" data-en="Back to Home">رجوع للرئيسية</a></small>
+  <footer class="simple-footer">
+    <div class="container footer-bar">
+      <span data-ar="© شركة المتميز الحديث" data-en="© AL MUTAMAYIZ AL HADIT">© شركة المتميز الحديث</span>
+      <a class="to-top" href="#top" data-ar="⬆ للأعلى" data-en="⬆ Top">⬆ للأعلى</a>
     </div>
   </footer>
 
-  <script>setLang("ar");</script>
+  <script>
+    setLangFromStorageOrDefault();
+  </script>
 </body>
 </html>
