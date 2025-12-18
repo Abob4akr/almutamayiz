@@ -1,53 +1,55 @@
-// Mobile menu toggle
-function toggleMenu(){
-  const mm = document.getElementById("mobileMenu");
-  if(!mm) return;
-  mm.classList.toggle("open");
+function toggleMenu() {
+  const nav = document.getElementById('mobileNav');
+  if (!nav) return;
+  nav.classList.toggle('open');
 }
 
-// Language toggle (AR/EN)
-let currentLang = "ar";
-function setLang(lang){
-  currentLang = lang;
+function setLang(lang) {
+  const html = document.documentElement;
+  const btn = document.getElementById('langBtn');
 
-  // Change direction
-  if(lang === "en"){
-    document.documentElement.lang = "en";
-    document.documentElement.dir  = "ltr";
-  }else{
-    document.documentElement.lang = "ar";
-    document.documentElement.dir  = "rtl";
+  if (lang === 'en') {
+    html.lang = 'en';
+    html.dir = 'ltr';
+    if (btn) btn.textContent = 'AR';
+  } else {
+    html.lang = 'ar';
+    html.dir = 'rtl';
+    if (btn) btn.textContent = 'EN';
   }
 
-  // Replace all elements with data-ar / data-en
-  document.querySelectorAll("[data-ar]").forEach(el=>{
-    el.textContent = (lang==="en") ? (el.getAttribute("data-en") || el.textContent) : el.getAttribute("data-ar");
+  // text
+  document.querySelectorAll('[data-ar]').forEach(el => {
+    const ar = el.getAttribute('data-ar');
+    const en = el.getAttribute('data-en');
+    el.textContent = (lang === 'en') ? (en ?? ar ?? '') : (ar ?? en ?? '');
   });
 
-  // Update lang button
-  const btn = document.getElementById("langBtn");
-  if(btn) btn.textContent = (lang==="en") ? "AR" : "EN";
+  // placeholders
+  document.querySelectorAll('[data-ph-ar]').forEach(el => {
+    const ar = el.getAttribute('data-ph-ar');
+    const en = el.getAttribute('data-ph-en');
+    el.setAttribute('placeholder', (lang === 'en') ? (en ?? ar ?? '') : (ar ?? en ?? ''));
+  });
+
+  // close mobile menu
+  const nav = document.getElementById('mobileNav');
+  if (nav) nav.classList.remove('open');
+
+  // store
+  try { localStorage.setItem('am_lang', lang); } catch(e){}
 }
 
-function toggleLang(){
-  setLang(currentLang === "ar" ? "en" : "ar");
+function toggleLang() {
+  const current = (document.documentElement.lang || 'ar').toLowerCase();
+  setLang(current === 'ar' ? 'en' : 'ar');
 }
 
-// Contact form -> WhatsApp send
-function sendQuoteToWhatsApp(e){
-  e.preventDefault();
-  const name = document.getElementById("name").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const note = document.getElementById("note").value.trim();
-
-  const msg =
-`طلب تسعيرة - شركة المتميز الحديث
-Name: ${name}
-Phone: ${phone}
-Email: ${email}
-Request: ${note}`;
-
-  const url = "https://wa.me/218923167702?text=" + encodeURIComponent(msg);
-  window.open(url, "_blank");
+function setLangFromStorageOrDefault() {
+  let lang = 'ar';
+  try {
+    const saved = localStorage.getItem('am_lang');
+    if (saved === 'en' || saved === 'ar') lang = saved;
+  } catch(e){}
+  setLang(lang);
 }
