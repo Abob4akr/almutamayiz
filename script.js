@@ -1,50 +1,53 @@
-(function () {
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileNav = document.getElementById("mobileNav");
-  const langBtn = document.getElementById("langBtn");
+// Mobile menu toggle
+function toggleMenu(){
+  const mm = document.getElementById("mobileMenu");
+  if(!mm) return;
+  mm.classList.toggle("open");
+}
 
-  // Mobile menu toggle
-  if (menuBtn && mobileNav) {
-    menuBtn.addEventListener("click", () => {
-      mobileNav.classList.toggle("show");
-    });
+// Language toggle (AR/EN)
+let currentLang = "ar";
+function setLang(lang){
+  currentLang = lang;
 
-    // Close menu when clicking a link
-    mobileNav.querySelectorAll("a").forEach(a => {
-      a.addEventListener("click", () => mobileNav.classList.remove("show"));
-    });
+  // Change direction
+  if(lang === "en"){
+    document.documentElement.lang = "en";
+    document.documentElement.dir  = "ltr";
+  }else{
+    document.documentElement.lang = "ar";
+    document.documentElement.dir  = "rtl";
   }
 
-  // Language toggle (AR/EN)
-  let lang = localStorage.getItem("lang") || "ar";
-  applyLang(lang);
+  // Replace all elements with data-ar / data-en
+  document.querySelectorAll("[data-ar]").forEach(el=>{
+    el.textContent = (lang==="en") ? (el.getAttribute("data-en") || el.textContent) : el.getAttribute("data-ar");
+  });
 
-  if (langBtn) {
-    langBtn.addEventListener("click", () => {
-      lang = (lang === "ar") ? "en" : "ar";
-      localStorage.setItem("lang", lang);
-      applyLang(lang);
-    });
-  }
+  // Update lang button
+  const btn = document.getElementById("langBtn");
+  if(btn) btn.textContent = (lang==="en") ? "AR" : "EN";
+}
 
-  function applyLang(current) {
-    const html = document.documentElement;
+function toggleLang(){
+  setLang(currentLang === "ar" ? "en" : "ar");
+}
 
-    if (current === "en") {
-      html.setAttribute("lang", "en");
-      html.setAttribute("dir", "ltr");
-      if (langBtn) langBtn.textContent = "AR";
-    } else {
-      html.setAttribute("lang", "ar");
-      html.setAttribute("dir", "rtl");
-      if (langBtn) langBtn.textContent = "EN";
-    }
+// Contact form -> WhatsApp send
+function sendQuoteToWhatsApp(e){
+  e.preventDefault();
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const note = document.getElementById("note").value.trim();
 
-    document.querySelectorAll(".t").forEach(el => {
-      const ar = el.getAttribute("data-ar");
-      const en = el.getAttribute("data-en");
-      if (current === "en" && en) el.textContent = en;
-      if (current === "ar" && ar) el.textContent = ar;
-    });
-  }
-})();
+  const msg =
+`طلب تسعيرة - شركة المتميز الحديث
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Request: ${note}`;
+
+  const url = "https://wa.me/218923167702?text=" + encodeURIComponent(msg);
+  window.open(url, "_blank");
+}
